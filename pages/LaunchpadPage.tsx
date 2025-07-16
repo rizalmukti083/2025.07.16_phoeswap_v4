@@ -72,11 +72,7 @@ const ProjectCard: React.FC<{ project: LaunchpadProject }> = ({ project }) => {
 };
 
 const PROJECTS_DATA: LaunchpadProject[] = [
-<<<<<<< HEAD
   { id: 'phnx-presale', name: 'Phoenix Token', tokenSymbol: 'PHNX', logoUrl: '/images/logo.png', descriptionShort: 'Revolutionizing DeFi on Solana with innovative trading solutions and a community-driven ecosystem.', status: 'active', targetAmount: 5000, targetAmountCurrency: 'SOL', raisedAmount: 750, pricePerToken: '1 PHNX = 0.005 SOL', slug: 'phnx_initial_sale' },
-=======
-  { id: 'phnx-presale', name: 'Phoenix Token', tokenSymbol: 'PHNX', logoUrl: 'https://i.imgur.com/RPT9jIh.png', descriptionShort: 'Revolutionizing DeFi on Solana with innovative trading solutions and a community-driven ecosystem.', status: 'active', targetAmount: 5000, targetAmountCurrency: 'SOL', raisedAmount: 750, pricePerToken: '1 PHNX = 0.005 SOL', slug: 'phnx_initial_sale' },
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
 ];
 
 const LaunchpadPage: React.FC = () => {
@@ -126,8 +122,4 @@ const LaunchpadPage: React.FC = () => {
     );
 };
 
-<<<<<<< HEAD
 export default LaunchpadPage;
-=======
-export default LaunchpadPage;
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "Phoenix Swap  Aplikacja, którą stworzyło \"Studio\" na podstawie naszych wytycznych, jest doskonała",
-=======
-  "name": "Phoenix Swap",
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
   "description": "Phoenix Swap is a decentralized exchange (DEX) built on the Solana blockchain, offering fast, secure, and low-cost token swaps, yield farming, and a launchpad for new projects.",
   "requestFramePermissions": []
 }

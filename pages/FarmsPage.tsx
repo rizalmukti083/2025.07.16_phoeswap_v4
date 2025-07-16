@@ -19,13 +19,8 @@ interface Farm {
 }
 
 const FARMS_DATA: Farm[] = [
-<<<<<<< HEAD
   { id: 'phnx-sol-lp', lpTokenName: 'PHNX-SOL LP', tokenA_logo: '/images/logo.png', tokenB_logo: '/images/tokens/sol.png', apr: '150.25%', earned: 0, stakedLpAmount: 0, totalLiquidity: '$250,000', rewardsTokenSymbol: 'PHNX', getLpLink: '/liquidity?tokenA=phnx&tokenB=sol', },
   { id: 'usdc-sol-lp', lpTokenName: 'USDC-SOL LP', tokenA_logo: '/images/tokens/usdc.png', tokenB_logo: '/images/tokens/sol.png', apr: '85.60%', earned: 0, stakedLpAmount: 0, totalLiquidity: '$1,200,000', rewardsTokenSymbol: 'PHNX', getLpLink: '/liquidity?tokenA=usdc&tokenB=sol', },
-=======
-  { id: 'phnx-sol-lp', lpTokenName: 'PHNX-SOL LP', tokenA_logo: 'https://i.imgur.com/RPT9jIh.png', tokenB_logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png', apr: '150.25%', earned: 0, stakedLpAmount: 0, totalLiquidity: '$250,000', rewardsTokenSymbol: 'PHNX', getLpLink: '/liquidity?tokenA=phnx&tokenB=sol', },
-  { id: 'usdc-sol-lp', lpTokenName: 'USDC-SOL LP', tokenA_logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png', tokenB_logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png', apr: '85.60%', earned: 0, stakedLpAmount: 0, totalLiquidity: '$1,200,000', rewardsTokenSymbol: 'PHNX', getLpLink: '/liquidity?tokenA=usdc&tokenB=sol', },
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
 ];
 
 const FarmCard: React.FC<{ farm: Farm; connected: boolean }> = ({ farm, connected }) => {
@@ -72,11 +67,7 @@ const FarmCard: React.FC<{ farm: Farm; connected: boolean }> = ({ farm, connecte
                   <span>{farm.rewardsTokenSymbol} Earned</span>
                   <span>{farm.earned.toFixed(4)}</span>
                 </div>
-<<<<<<< HEAD
                 <button onClick={handleHarvest} disabled={farm.earned <= 0} className="btn-secondary-phoenix !py-1.5 !text-xs">Harvest</button>
-=======
-                <button onClick={handleHarvest} disabled={farm.earned <= 0} className="w-full bg-phoenix-border text-white font-bold py-1.5 px-4 rounded-lg hover:bg-phoenix-border/70 transition-colors text-xs disabled:opacity-50 disabled:cursor-not-allowed">Harvest</button>
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
               </div>
 
               <div>
@@ -88,13 +79,8 @@ const FarmCard: React.FC<{ farm: Farm; connected: boolean }> = ({ farm, connecte
                   <input type="number" placeholder="Amount to stake" value={stakeAmount} onChange={(e) => setStakeAmount(e.target.value)} className="w-full bg-phoenix-container-bg border border-phoenix-border rounded-md p-1.5 text-xs text-phoenix-text-primary outline-none focus:border-phoenix-accent"/>
                 </div>
                 <div className="flex gap-2 mt-2">
-<<<<<<< HEAD
                   <button onClick={handleStake} className="btn-primary-phoenix !flex-1 !py-1.5 !text-xs">Stake</button>
                   <button onClick={handleUnstake} disabled={farm.stakedLpAmount <= 0} className="btn-secondary-phoenix !flex-1 !py-1.5 !text-xs">Unstake All</button>
-=======
-                  <button onClick={handleStake} className="flex-1 bg-phoenix-accent text-black font-bold py-1.5 px-4 rounded-lg hover:bg-orange-400 transition-colors text-xs">Stake</button>
-                  <button onClick={handleUnstake} disabled={farm.stakedLpAmount <= 0} className="flex-1 bg-phoenix-border text-white font-bold py-1.5 px-4 rounded-lg hover:bg-phoenix-border/70 transition-colors text-xs disabled:opacity-50 disabled:cursor-not-allowed">Unstake All</button>
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
                 </div>
               </div>
             </>
@@ -154,8 +140,4 @@ const FarmsPage: React.FC = () => {
     );
 };
 
-<<<<<<< HEAD
 export default FarmsPage;
-=======
-export default FarmsPage;
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

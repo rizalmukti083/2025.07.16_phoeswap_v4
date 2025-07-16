@@ -16,21 +16,13 @@ export const usePresale = () => {
         setIsLoading(true);
         try {
             const [salePda] = web3.PublicKey.findProgramAddressSync([Buffer.from("sale"), Buffer.from(PRESALE_ID)], program.programId);
-<<<<<<< HEAD
             const saleAccount = await program.account['sale'].fetch(salePda);
-=======
-            const saleAccount = await program.account.sale.fetch(salePda);
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
             setSaleData(saleAccount as any);
 
             if (wallet?.publicKey) {
                 const [purchaseRecordPda] = web3.PublicKey.findProgramAddressSync([Buffer.from("purchase"), Buffer.from(PRESALE_ID), wallet.publicKey.toBuffer()], program.programId);
                 try {
-<<<<<<< HEAD
                     const record = await program.account['purchaseRecord'].fetch(purchaseRecordPda);
-=======
-                    const record = await program.account.purchaseRecord.fetch(purchaseRecordPda);
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
                     setUserPurchaseRecord(record as any);
                 } catch (e) {
                     setUserPurchaseRecord(null);
@@ -42,18 +34,10 @@ export const usePresale = () => {
         } finally {
             setIsLoading(false);
         }
-<<<<<<< HEAD
-=======
-    // eslint-disable-next-line react-hooks/exhaustive-deps
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
     }, [program, wallet?.publicKey, setIsLoading, setSaleData, setUserPurchaseRecord]);
 
     useEffect(() => {
         fetchSaleData();
-<<<<<<< HEAD
-=======
-    // eslint-disable-next-line react-hooks/exhaustive-deps
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
     }, [fetchSaleData, wallet?.publicKey]);
 
     useEffect(() => {
@@ -61,10 +45,6 @@ export const usePresale = () => {
             fetchSaleData();
         }, 30000); 
         return () => clearInterval(interval);
-<<<<<<< HEAD
-=======
-    // eslint-disable-next-line react-hooks/exhaustive-deps
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
     }, [fetchSaleData]);
 };
 
@@ -144,8 +124,4 @@ export const usePresaleActions = () => {
     }, [program, wallet]);
 
     return { purchaseTokens, claimTokens, initializeSale, withdrawSol, isAdmin };
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

@@ -1,16 +1,8 @@
 import { useMemo } from 'react';
-<<<<<<< HEAD
 import { Program, AnchorProvider } from '@coral-xyz/anchor';
 import { useConnection, useAnchorWallet } from '@solana/wallet-adapter-react';
 import { PublicKey } from '@solana/web3.js';
 import { IDL } from '../idl/phoenix_presale';
-=======
-import { Program, AnchorProvider, Wallet } from '@coral-xyz/anchor';
-import { useConnection, useAnchorWallet } from '@solana/wallet-adapter-react';
-import { PublicKey } from '@solana/web3.js';
-import { PROGRAM_ID } from '../constants';
-import { IDL, PhoenixPresale } from '../idl/phoenix_presale';
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
 
 export const useAnchorProgram = () => {
     const { connection } = useConnection();
@@ -25,7 +17,6 @@ export const useAnchorProgram = () => {
             publicKey: new PublicKey('11111111111111111111111111111111'),
             signTransaction: () => Promise.reject("Wallet not connected"),
             signAllTransactions: () => Promise.reject("Wallet not connected"),
-<<<<<<< HEAD
         };
         return new AnchorProvider(connection, readOnlyWallet as any, AnchorProvider.defaultOptions());
     }, [connection, wallet]);
@@ -40,15 +31,3 @@ export const useAnchorProgram = () => {
     
     return { program, provider, wallet };
 };
-=======
-        } as Wallet;
-        return new AnchorProvider(connection, readOnlyWallet, AnchorProvider.defaultOptions());
-    }, [connection, wallet]);
-
-    const program = useMemo(() => {
-        return new Program(IDL, PROGRAM_ID, provider) as unknown as Program<PhoenixPresale>;
-    }, [provider]);
-    
-    return { program, provider, wallet };
-};
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

@@ -19,11 +19,7 @@ interface FaqItem {
 }
 
 const PREVIOUS_PROJECTS: PreviousB2MProject[] = [
-<<<<<<< HEAD
   { id: 'project-gamma', name: 'Project Gamma', tokenSymbol: 'GAMMA', imageUrl: '/images/b2m/project-gamma.png', phnxBurned: 500000, tokensMinted: 1000000, date: 'Jan 15, 2025', description: 'A successful launch of the Gamma yield aggregation protocol.' },
-=======
-  { id: 'project-gamma', name: 'Project Gamma', tokenSymbol: 'GAMMA', imageUrl: 'https://picsum.photos/64/64', phnxBurned: 500000, tokensMinted: 1000000, date: 'Jan 15, 2025', description: 'A successful launch of the Gamma yield aggregation protocol.' },
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
 ];
 
 const FAQ_ITEMS: FaqItem[] = [
@@ -116,8 +112,4 @@ const B2MPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default B2MPage;
-=======
-export default B2MPage;
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

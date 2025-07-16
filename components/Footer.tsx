@@ -16,11 +16,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <Link to="/" className="flex items-center space-x-3">
-<<<<<<< HEAD
             <img src="/images/logo.png" alt="Phoenix Swap Logo" className="h-8 w-8 rounded-full" />
-=======
-            <img src="https://i.imgur.com/RPT9jIh.png" alt="Phoenix Swap Logo" className="h-8 w-8 rounded-full" />
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
             <span className="font-semibold text-phoenix-text-primary">Phoenix Swap</span>
           </Link>
           <div className="flex space-x-6">
@@ -49,8 +45,4 @@ const Footer: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Footer;
-=======
-export default Footer;
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

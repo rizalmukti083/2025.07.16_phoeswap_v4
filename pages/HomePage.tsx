@@ -86,11 +86,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
             <div className="hidden md:flex justify-center lg:justify-end">
-<<<<<<< HEAD
               <img alt="PhoenixSwap Logo" width={500} height={500} className="object-contain w-[300px] sm:w-[450px] lg:w-[500px] animate-pulse-light" src="/images/logo.png" />
-=======
-              <img alt="PhoenixSwap Logo" width={500} height={500} className="object-contain w-[300px] sm:w-[450px] lg:w-[500px] animate-pulse-light" src="https://i.imgur.com/RPT9jIh.png" />
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
             </div>
           </div>
         </section>
@@ -141,8 +137,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default HomePage;
-=======
-export default HomePage;
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

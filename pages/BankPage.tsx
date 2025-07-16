@@ -26,11 +26,7 @@ const BankPage: React.FC = () => {
     balance: 0,
     stakedAmount: 0,
     earnedRewards: 0,
-<<<<<<< HEAD
     logoURI: '/images/logo.png',
-=======
-    logoURI: 'https://i.imgur.com/RPT9jIh.png',
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
   });
   const [stakingOptions, setStakingOptions] = useState<StakingOption[]>([
     { type: 'auto', apy: '120.5%', staked: false, details: "Your staked PHNX is automatically compounded for higher returns." },
@@ -121,8 +117,4 @@ const BankPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default BankPage;
-=======
-export default BankPage;
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

@@ -5,11 +5,7 @@ import { useWallet } from '@solana/wallet-adapter-react';
 import { FaCoins as IconMainMenuEarn } from "react-icons/fa";
 import { BsTools as IconMainMenuTools, BsJournalBookmarkFill as IconSubQuests } from "react-icons/bs";
 import { FiChevronDown, FiDownloadCloud, FiCpu as IconSubSmartSwap, FiSettings as IconSubTokenFactory, FiLogOut } from "react-icons/fi";
-<<<<<<< HEAD
 import { AiFillFire as IconSubBurnToMint, AiOutlineMessage as IconSubAIChat } from "react-icons/ai";
-=======
-import { AiOutlineSwap as IconSubSwap, AiFillFire as IconSubBurnToMint, AiOutlineMessage as IconSubAIChat } from "react-icons/ai";
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
 import { MdWaterDrop as IconSubLiquidity, MdAccountBalance as IconSubBank } from "react-icons/md";
 import { GiBarn as IconSubFarms } from "react-icons/gi";
 import MyMultiButton from './MyMultiButton';
@@ -104,11 +100,7 @@ const NavDropdown: React.FC<{ dropdownItem: DropdownNavItem }> = ({ dropdownItem
 };
 
 const CustomWalletButton: React.FC = () => {
-<<<<<<< HEAD
     const { publicKey, disconnect, wallet } = useWallet();
-=======
-    const { wallets, publicKey, disconnect, wallet, select } = useWallet();
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
     const [isMounted, setIsMounted] = useState(false);
     useEffect(() => setIsMounted(true), []);
     
@@ -148,11 +140,7 @@ export default function AppBar() {
       <div className="flex justify-between items-center h-16 w-full max-w-7xl mx-auto px-4 lg:px-6">
         <div className="flex md:justify-start gap-4 lg:gap-6 items-center">
           <Link to="/" className="flex items-center space-x-2">
-<<<<<<< HEAD
             <img src="/images/logo.png" alt="Phoenix Swap Logo" className="w-10 h-10 rounded-full"/>
-=======
-            <img src="https://i.imgur.com/RPT9jIh.png" alt="Phoenix Swap Logo" className="w-10 h-10 rounded-full"/>
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
             <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 hidden sm:block">Phoenix Swap</span>
           </Link>
           <ul className="hidden md:flex items-center gap-1 lg:gap-2">
@@ -170,11 +158,7 @@ export default function AppBar() {
           </ul>
         </div>
         <div className="flex justify-end items-center gap-3">
-<<<<<<< HEAD
           <a href="/phoenix-lightpaper.pdf" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex items-center justify-center gap-2 text-sm font-semibold transition-all outline-none text-black shadow-sm h-9 rounded-md px-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:brightness-110 transform hover:-translate-y-px">
-=======
-          <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex items-center justify-center gap-2 text-sm font-semibold transition-all outline-none text-black shadow-sm h-9 rounded-md px-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:brightness-110 transform hover:-translate-y-px">
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
             <FiDownloadCloud className="h-4 w-4" /> Lightpaper
           </a>
           <CustomWalletButton />
@@ -182,8 +166,4 @@ export default function AppBar() {
       </div>
     </nav>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

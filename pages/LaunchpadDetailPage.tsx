@@ -43,11 +43,7 @@ const LaunchpadDetailPage: React.FC = () => {
       <div className="w-full max-w-lg mx-auto bg-phoenix-container-bg p-8 rounded-2xl shadow-2xl border border-phoenix-border text-center">
         <h2 className="text-2xl font-bold mb-4">Admin Panel</h2>
         <p className="mb-6 text-phoenix-text-secondary">No active presale found. As the admin, you can initialize one.</p>
-<<<<<<< HEAD
         <button onClick={initializeSale} className="btn-primary-phoenix">Initialize Presale</button>
-=======
-        <button onClick={initializeSale} className="w-full bg-phoenix-accent text-black font-bold py-3 px-4 rounded-lg hover:bg-orange-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Initialize Presale</button>
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
       </div>
     )
   }
@@ -88,11 +84,7 @@ const LaunchpadDetailPage: React.FC = () => {
           {isSaleActive && (
              <div>
                 <input type="number" value={purchaseAmount} onChange={(e) => setPurchaseAmount(e.target.value)} placeholder="Enter SOL amount" className="w-full p-3 bg-phoenix-bg border border-phoenix-border rounded-lg text-white outline-none focus:border-orange-500"/>
-<<<<<<< HEAD
                  <button onClick={handlePurchase} className="w-full mt-3 btn-primary-phoenix" disabled={!purchaseAmount || parseFloat(purchaseAmount) <= 0}>Buy PHNX</button>
-=======
-                 <button onClick={handlePurchase} className="w-full mt-3 bg-phoenix-accent text-black font-bold py-3 px-4 rounded-lg hover:bg-orange-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled={!purchaseAmount || parseFloat(purchaseAmount) <= 0}>Buy PHNX</button>
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
             </div>
           )}
           {userPurchaseRecord && (
@@ -103,17 +95,10 @@ const LaunchpadDetailPage: React.FC = () => {
             </div>
           )}
           {isSaleEnded && userPurchaseRecord && !userPurchaseRecord.claimed && (
-<<<<<<< HEAD
             <button onClick={claimTokens} className="btn-primary-phoenix bg-green-500 hover:bg-green-600">Claim Your PHNX</button>
           )}
           {isAdmin && isSaleEnded && (
              <button onClick={withdrawSol} className="w-full mt-4 btn-secondary-phoenix">Admin: Withdraw SOL</button>
-=======
-            <button onClick={claimTokens} className="w-full bg-green-500 text-black font-bold py-3 px-4 rounded-lg hover:bg-green-600 transition-colors">Claim Your PHNX</button>
-          )}
-          {isAdmin && isSaleEnded && (
-             <button onClick={withdrawSol} className="w-full mt-4 bg-phoenix-border text-white font-bold py-3 px-4 rounded-lg hover:bg-phoenix-border/70 transition-colors">Admin: Withdraw SOL</button>
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
           )}
         </div>
       ) : (
@@ -126,8 +111,4 @@ const LaunchpadDetailPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default LaunchpadDetailPage;
-=======
-export default LaunchpadDetailPage;
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

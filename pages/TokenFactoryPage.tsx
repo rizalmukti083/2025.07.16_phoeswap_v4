@@ -18,10 +18,6 @@ const TokenFactoryPage: React.FC = () => {
   const [decimals, setDecimals] = useState<string>('9');
   const [totalSupply, setTotalSupply] = useState('');
   const [description, setDescription] = useState('');
-<<<<<<< HEAD
-=======
-  const [iconFile, setIconFile] = useState<File | null>(null);
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
   const [iconPreview, setIconPreview] = useState<string | null>(null);
   const [socialLinks, setSocialLinks] = useState<SocialLink[]>([{ id: 1, url: '' }]);
   const [revokeFreeze, setRevokeFreeze] = useState(false);
@@ -46,10 +42,6 @@ const TokenFactoryPage: React.FC = () => {
   const handleIconChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
-<<<<<<< HEAD
-=======
-      setIconFile(file);
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
       setIconPreview(URL.createObjectURL(file));
     }
   };
@@ -170,19 +162,11 @@ const TokenFactoryPage: React.FC = () => {
                     <span className="text-phoenix-highlight">{totalCost.toFixed(2)} SOL</span>
                 </div>
                 {connected ? (
-<<<<<<< HEAD
                     <button onClick={handleCreateToken} className="btn-primary-phoenix" disabled={!isFormValid}>
                         Create Token
                     </button>
                 ) : (
                     <button onClick={() => setVisible(true)} className="btn-primary-phoenix">
-=======
-                    <button onClick={handleCreateToken} className="w-full bg-phoenix-accent text-black font-bold py-3 text-base rounded-md disabled:opacity-50 disabled:cursor-not-allowed" disabled={!isFormValid}>
-                        Create Token
-                    </button>
-                ) : (
-                    <button onClick={() => setVisible(true)} className="w-full bg-phoenix-accent text-black font-bold py-3 text-base rounded-md">
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
                         Connect Wallet to Create
                     </button>
                 )}
@@ -194,8 +178,4 @@ const TokenFactoryPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default TokenFactoryPage;
-=======
-export default TokenFactoryPage;
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

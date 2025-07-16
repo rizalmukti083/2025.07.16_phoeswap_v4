@@ -44,11 +44,7 @@ const TokenModal: React.FC<TokenModalProps> = ({ tokens, isOpen, onClose, onSele
                 onClick={() => { onSelectToken(token); onClose(); }}
                 className="w-full flex items-center gap-3 p-2.5 rounded-md hover:bg-phoenix-border transition-colors"
               >
-<<<<<<< HEAD
                 <img src={token.logoURI || '/images/tokens/placeholder.png'} alt={token.symbol} className="h-7 w-7 rounded-full" />
-=======
-                <img src={token.logoURI || 'https://picsum.photos/64/64'} alt={token.symbol} className="h-7 w-7 rounded-full" />
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
                 <div>
                   <p className="font-semibold text-left">{token.name}</p>
                   <p className="text-xs text-phoenix-text-secondary text-left">{token.symbol}</p>
@@ -62,8 +58,4 @@ const TokenModal: React.FC<TokenModalProps> = ({ tokens, isOpen, onClose, onSele
   );
 };
 
-<<<<<<< HEAD
 export default TokenModal;
-=======
-export default TokenModal;
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2

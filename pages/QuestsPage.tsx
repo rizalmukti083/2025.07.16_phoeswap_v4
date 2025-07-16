@@ -16,15 +16,9 @@ interface Quest {
 }
 
 const QUESTS_DATA: Quest[] = [
-<<<<<<< HEAD
     { id: 0, title: 'Rise Together', description: 'Join The Phoenix World in its first year of launch!', points: 10, rewardAmount: 100, rewardToken: 'PHNX', imageUrl: '/images/quests/quest-0.webp', slug: 'rise-together', status: 'upcoming' },
     { id: 1, title: 'Spread the Flame', description: 'Join a tribe to unite with the community.', points: 5, rewardAmount: 50, rewardToken: 'PHNX', imageUrl: '/images/quests/quest-1.webp', slug: 'spread-the-flame', status: 'upcoming' },
     { id: 2, title: 'Ancient Archives', description: 'Read The Phoenix World storyline.', points: 5, rewardAmount: 50, rewardToken: 'PHNX', imageUrl: '/images/quests/quest-2.webp', slug: 'ancient-archives', status: 'upcoming' },
-=======
-    { id: 0, title: 'Rise Together', description: 'Join The Phoenix World in its first year of launch!', points: 10, rewardAmount: 100, rewardToken: 'PHNX', imageUrl: 'https://picsum.photos/400/600?random=1', slug: 'rise-together', status: 'upcoming' },
-    { id: 1, title: 'Spread the Flame', description: 'Join a tribe to unite with the community.', points: 5, rewardAmount: 50, rewardToken: 'PHNX', imageUrl: 'https://picsum.photos/400/600?random=2', slug: 'spread-the-flame', status: 'upcoming' },
-    { id: 2, title: 'Ancient Archives', description: 'Read The Phoenix World storyline.', points: 5, rewardAmount: 50, rewardToken: 'PHNX', imageUrl: 'https://picsum.photos/400/600?random=3', slug: 'ancient-archives', status: 'upcoming' },
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
 ];
 
 const QuestCard: React.FC<{ quest: Quest; connected: boolean }> = ({ quest, connected }) => {
@@ -105,8 +99,4 @@ const QuestsPage: React.FC = () => {
     );
 };
 
-<<<<<<< HEAD
 export default QuestsPage;
-=======
-export default QuestsPage;
->>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
