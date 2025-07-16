@@ -1,0 +1,3049 @@
+﻿Lista plików i ich zawarto z folderu: C:\Intel\gp\681809149812\phoenix-swap-v4
+Wygenerowano: 07/16/2025 11:18:44
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\.env.local
+   Rozmiar: 35 bajtów
+
+
+GEMINI_API_KEY=PLACEHOLDER_API_KEY
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\.env.local
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\.gitignore
+   Rozmiar: 253 bajtów
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\.gitignore
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\2025-07-16__11.18 Lista Plików .txt
+   Rozmiar: 119 bajtów
+
+
+Lista plików i ich zawarto z folderu: C:\Intel\gp\681809149812\phoenix-swap-v4
+Wygenerowano: 07/16/2025 11:18:44
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\.env.local
+   Rozmiar: 35 bajtów
+
+
+GEMINI_API_KEY=PLACEHOLDER_API_KEY
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\.env.local
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\.gitignore
+   Rozmiar: 253 bajtów
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\.gitignore
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\2025-07-16__11.18 Lista Plików .txt
+   Rozmiar: 119 bajtów
+
+
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\2025-07-16__11.18 Lista Plików .txt
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\App.tsx
+   Rozmiar: 1746 bajtów
+
+
+
+import React from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import { AppProviders } from './providers/AppProviders';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import SwapPage from './pages/SwapPage';
+import LaunchpadPage from './pages/LaunchpadPage';
+import LaunchpadDetailPage from './pages/LaunchpadDetailPage';
+import FarmsPage from './pages/FarmsPage';
+import BankPage from './pages/BankPage';
+import LiquidityPage from './pages/LiquidityPage';
+import B2MPage from './pages/B2MPage';
+import QuestsPage from './pages/QuestsPage';
+import TokenFactoryPage from './pages/TokenFactoryPage';
+import ChatPage from './pages/ChatPage';
+import SmartSwapPage from './pages/SmartSwapPage';
+
+const App: React.FC = () => {
+  return (
+    <AppProviders>
+      <HashRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/swap" element={<SwapPage />} />
+            <Route path="/launchpad" element={<LaunchpadPage />} />
+            <Route path="/launchpad/:projectId" element={<LaunchpadDetailPage />} />
+            <Route path="/farms" element={<FarmsPage />} />
+            <Route path="/bank" element={<BankPage />} />
+            <Route path="/liquidity" element={<LiquidityPage />} />
+            <Route path="/b2m" element={<B2MPage />} />
+            <Route path="/quests" element={<QuestsPage />} />
+            <Route path="/tokenfactory" element={<TokenFactoryPage />} />
+            <Route path="/chat" element={<ChatPage />} />
+            <Route path="/smart-swap" element={<SmartSwapPage />} />
+          </Routes>
+        </Layout>
+      </HashRouter>
+    </AppProviders>
+  );
+};
+
+export default App;
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\App.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\constants.ts
+   Rozmiar: 784 bajtów
+
+
+
+import { PublicKey } from "@solana/web3.js";
+
+// The Program ID of the Phoenix Presale Anchor program.
+export const PROGRAM_ID = new PublicKey("JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H");
+
+// A unique identifier for the presale instance. Used for deriving PDAs.
+export const PRESALE_ID = "phnx_initial_sale";
+
+// The mint address of the PHNX token being sold.
+export const TOKEN_MINT_ADDRESS = new PublicKey("G3yL3qGg381D92y48EaF1bsyve3pS9y5yAcj2nuruTjM"); 
+    
+// The wallet that will receive the SOL contributions from the presale.
+export const TREASURY_WALLET = new PublicKey("H4G91tS28CjSsgcR8pB58c2g521uR3Hq9Y3e2jH4Kz8D");
+
+// SPL Associated Token Account program ID
+export const ASSOCIATED_TOKEN_PROGRAM_ID = new PublicKey("ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL");
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\constants.ts
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\index.css
+   Rozmiar: 1073 bajtów
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Custom styles for the wallet adapter button to match the site's theme */
+  .wallet-adapter-button-trigger {
+    background-color: #FF8A00 !important;
+    color: #120C1A !important;
+    font-weight: bold !important;
+    border-radius: 8px !important;
+    padding: 10px 20px !important;
+    transition: background-color 0.2s ease-in-out !important;
+    line-height: normal !important;
+    height: 40px !important;
+  }
+  
+  .wallet-adapter-button-trigger:hover {
+    background-color: #FFC700 !important;
+  }
+  
+  /* Reusable primary button style */
+  .btn-primary-phoenix {
+    @apply w-full bg-phoenix-accent text-black font-bold py-3 px-4 rounded-lg hover:bg-orange-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Reusable secondary button style */
+  .btn-secondary-phoenix {
+    @apply w-full bg-phoenix-border text-white font-bold py-3 px-4 rounded-lg hover:bg-phoenix-border/70 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+}
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\index.css
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\index.html
+   Rozmiar: 500 bajtów
+
+
+
+<!DOCTYPE html>
+<html lang="en" data-theme="phoenix">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phoenix Swap</title>
+    <script src="https://terminal.jup.ag/main-v2.js" data-preload></script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\index.html
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\index.tsx
+   Rozmiar: 372 bajtów
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\index.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\metadata.json
+   Rozmiar: 349 bajtów
+
+
+{
+  "name": "Phoenix Swap  Aplikacja, którą stworzyło \"Studio\" na podstawie naszych wytycznych, jest doskonała",
+  "description": "Phoenix Swap is a decentralized exchange (DEX) built on the Solana blockchain, offering fast, secure, and low-cost token swaps, yield farming, and a launchpad for new projects.",
+  "requestFramePermissions": []
+}
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\metadata.json
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\package.json
+   Rozmiar: 1438 bajtów
+
+
+
+{
+  "name": "phoenix-swap-vite",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
+    "@heroicons/react": "^2.1.3",
+    "@solana/spl-token": "^0.4.6",
+    "@solana/spl-token-registry": "^0.2.4574",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-wallets": "^0.19.33",
+    "@solana/web3.js": "^1.98.2",
+    "@tanstack/react-query": "^5.51.1",
+    "buffer": "^6.0.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
+    "lucide-react": "^0.417.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.1",
+    "sonner": "^1.5.0",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "daisyui": "^4.12.10",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-node-polyfills": "^0.22.0"
+  }
+}
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\package.json
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\README.md
+   Rozmiar: 297 bajtów
+
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\README.md
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\tailwind.config.js
+   Rozmiar: 1326 bajtów
+
+
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'phoenix-bg': '#120C1A',
+        'phoenix-container-bg': '#1A1426',
+        'phoenix-border': '#33294D',
+        'phoenix-accent': '#FF8A00',
+        'phoenix-highlight': '#FFC700',
+        'phoenix-text-primary': '#FFFFFF',
+        'phoenix-text-secondary': '#A19CB4',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'pulse-light': 'pulseLight 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        pulseLight: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '.7' },
+        }
+      }
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('daisyui'),
+  ],
+  daisyui: {
+    themes: [
+      {
+        phoenix: {
+          "primary": "#FF8A00",
+          "secondary": "#FFC700",
+          "accent": "#33294D",
+          "neutral": "#1A1426",
+          "base-100": "#120C1A",
+          "info": "#3ABFF8",
+          "success": "#36D399",
+          "warning": "#FBBD23",
+          "error": "#F87272",
+        },
+      },
+      "dark",
+    ],
+  },
+};
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\tailwind.config.js
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\tsconfig.json
+   Rozmiar: 643 bajtów
+
+
+
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\tsconfig.json
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\types.ts
+   Rozmiar: 515 bajtów
+
+
+
+import type { BN } from '@coral-xyz/anchor';
+import type { PublicKey } from '@solana/web3.js';
+
+export interface SaleData {
+  presaleId: string;
+  authority: PublicKey;
+  treasury: PublicKey;
+  vault: PublicKey;
+  tokenMint: PublicKey;
+  saleTokenAccount: PublicKey;
+  priceLamports: BN;
+  startTime: BN;
+  endTime: BN;
+  softCapLamports: BN;
+  hardCapLamports: BN;
+  totalRaised: BN;
+  isActive: boolean;
+}
+
+export interface PurchaseRecord {
+    purchaser: PublicKey;
+    amountSpent: BN;
+    claimed: boolean;
+}
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\types.ts
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\vite.config.ts
+   Rozmiar: 864 bajtów
+
+
+
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { nodePolyfills } from 'vite-plugin-node-polyfills';
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+    nodePolyfills({
+      // To exclude specific polyfills, add them to this list.
+      exclude: [
+        'fs', // Excludes the polyfill for `fs` and `node:fs`.
+      ],
+      // Whether to polyfill `node:` protocol imports.
+      protocolImports: true,
+    }),
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './'),
+    },
+  },
+  define: {
+    // This is required for the wallet adapter and other Solana libraries.
+    'process.env.BROWSER': true,
+  },
+});
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\vite.config.ts
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\AppBar.tsx
+   Rozmiar: 8019 bajtów
+
+
+
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useWallet } from '@solana/wallet-adapter-react';
+import { FaCoins as IconMainMenuEarn } from "react-icons/fa";
+import { BsTools as IconMainMenuTools, BsJournalBookmarkFill as IconSubQuests } from "react-icons/bs";
+import { FiChevronDown, FiDownloadCloud, FiCpu as IconSubSmartSwap, FiSettings as IconSubTokenFactory, FiLogOut } from "react-icons/fi";
+import { AiFillFire as IconSubBurnToMint, AiOutlineMessage as IconSubAIChat } from "react-icons/ai";
+import { MdWaterDrop as IconSubLiquidity, MdAccountBalance as IconSubBank } from "react-icons/md";
+import { GiBarn as IconSubFarms } from "react-icons/gi";
+import MyMultiButton from './MyMultiButton';
+
+interface NavLinkItem {
+  label: string;
+  href: string;
+  icon?: React.ElementType;
+  target?: string;
+  rel?: string;
+}
+
+interface DropdownNavItem {
+  type: 'dropdown';
+  label: string;
+  mainIcon: React.ElementType;
+  sublinks: NavLinkItem[];
+}
+
+type NavItem = { type: 'link'; label: string; href: string } | DropdownNavItem;
+
+const NAV_ITEMS: NavItem[] = [
+  { type: 'link', label: 'Swap', href: '/swap' },
+  { type: 'link', label: 'Launchpad', href: '/launchpad' },
+  {
+    type: 'dropdown',
+    label: "Earn",
+    mainIcon: IconMainMenuEarn,
+    sublinks: [
+      { label: "Liquidity", href: "/liquidity", icon: IconSubLiquidity },
+      { label: "Farms", href: "/farms", icon: IconSubFarms },
+      { label: "Bank", href: "/bank", icon: IconSubBank },
+    ],
+  },
+  {
+    type: 'dropdown',
+    label: "Tools",
+    mainIcon: IconMainMenuTools,
+    sublinks: [
+      { label: "Smart Swap", href: "/smart-swap", icon: IconSubSmartSwap },
+      { label: "Token Factory", href: "/tokenfactory", icon: IconSubTokenFactory },
+      { label: "Burn to Mint", href: "/b2m", icon: IconSubBurnToMint },
+      { label: "Quests", href: "/quests", icon: IconSubQuests },
+      { label: "Phoenix AI Chat", href: "/chat", icon: IconSubAIChat },
+    ],
+  },
+];
+
+const DropdownMenuItem: React.FC<{ link: NavLinkItem; onClick?: () => void }> = ({ link, onClick }) => {
+  const IconComponent = link.icon;
+  const linkClasses = "flex justify-start items-center gap-3 select-none rounded-md p-2.5 text-sm font-medium leading-none no-underline outline-none transition-colors duration-200 ease-out text-phoenix-text-secondary hover:bg-phoenix-border hover:text-phoenix-text-primary";
+  
+  if (link.target === "_blank") {
+    return (
+      <a href={link.href} target="_blank" rel={link.rel || "noopener noreferrer"} onClick={onClick} className={linkClasses}>
+        {IconComponent && <IconComponent className="h-4 w-4" />} {link.label}
+      </a>
+    );
+  }
+  
+  return (
+    <Link to={link.href} onClick={onClick} className={linkClasses}>
+      {IconComponent && <IconComponent className="h-4 w-4" />} {link.label}
+    </Link>
+  );
+};
+
+const NavDropdown: React.FC<{ dropdownItem: DropdownNavItem }> = ({ dropdownItem }) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const MainIcon = dropdownItem.mainIcon;
+
+  return (
+    <div className="relative group" onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
+      <button className="text-sm font-medium flex items-center gap-1 px-3 py-2 rounded-md text-phoenix-text-primary hover:bg-phoenix-border/50 transition-colors duration-200 ease-out">
+        {MainIcon && <MainIcon className="h-4 w-4" />}
+        <span className="transition-colors group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600">
+            {dropdownItem.label}
+        </span>
+        <FiChevronDown className={`ml-1 h-3 w-3 transition-transform duration-200 ease-out ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+      <div className={`absolute left-0 top-full pt-2 w-[230px] transition-all duration-300 ease-out transform-gpu ${isOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
+        <ul className="rounded-xl border border-phoenix-border bg-phoenix-bg p-1.5 shadow-2xl shadow-black/40">
+          {dropdownItem.sublinks.map((sublink) => (
+            <li key={sublink.href} className="my-0.5">
+              <DropdownMenuItem link={sublink} onClick={() => setIsOpen(false)} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+const CustomWalletButton: React.FC = () => {
+    const { publicKey, disconnect, wallet } = useWallet();
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => setIsMounted(true), []);
+    
+    if (!isMounted) {
+        return <div className="h-10 w-36 rounded-md bg-phoenix-border animate-pulse"></div>;
+    }
+    
+    if (!publicKey || !wallet) {
+        return <MyMultiButton />;
+    }
+
+    const base58 = publicKey.toBase58();
+    const shortAddress = `${base58.slice(0, 4)}...${base58.slice(-4)}`;
+
+    return (
+        <div className="relative group">
+            <button className="flex items-center justify-center h-10 px-4 text-sm font-medium bg-phoenix-container-bg border border-phoenix-border rounded-md text-phoenix-text-primary hover:border-phoenix-accent/80 transition-colors">
+                <img src={wallet.adapter.icon} alt={`${wallet.adapter.name} icon`} className="w-5 h-5 mr-2 rounded-full" />
+                {shortAddress}
+            </button>
+            <div className="absolute right-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                <ul className="rounded-md border border-phoenix-border bg-phoenix-bg p-1 shadow-2xl shadow-black/30">
+                    <li>
+                        <button onClick={disconnect} className="w-full flex items-center gap-2 p-2 text-sm rounded-md text-phoenix-text-secondary hover:bg-phoenix-border hover:text-red-500">
+                            <FiLogOut /> Disconnect
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    );
+};
+
+export default function AppBar() {
+  return (
+    <nav className="sticky top-0 z-50 w-full border-b border-phoenix-border bg-phoenix-container-bg/95 backdrop-blur supports-[backdrop-filter]:bg-phoenix-container-bg/60">
+      <div className="flex justify-between items-center h-16 w-full max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="flex md:justify-start gap-4 lg:gap-6 items-center">
+          <Link to="/" className="flex items-center space-x-2">
+            <img src="/images/logo.png" alt="Phoenix Swap Logo" className="w-10 h-10 rounded-full"/>
+            <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 hidden sm:block">Phoenix Swap</span>
+          </Link>
+          <ul className="hidden md:flex items-center gap-1 lg:gap-2">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.label}>
+                {item.type === 'link' ? (
+                  <Link to={item.href} className="text-sm font-medium flex items-center gap-1 px-3 py-2 rounded-md text-phoenix-text-primary hover:text-phoenix-accent hover:bg-phoenix-border/50 transition-colors">
+                    {item.label}
+                  </Link>
+                ) : (
+                  <NavDropdown dropdownItem={item} />
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex justify-end items-center gap-3">
+          <a href="/phoenix-lightpaper.pdf" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex items-center justify-center gap-2 text-sm font-semibold transition-all outline-none text-black shadow-sm h-9 rounded-md px-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:brightness-110 transform hover:-translate-y-px">
+            <FiDownloadCloud className="h-4 w-4" /> Lightpaper
+          </a>
+          <CustomWalletButton />
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\AppBar.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\Countdown.tsx
+   Rozmiar: 1779 bajtów
+
+
+
+import React, { useState, useEffect } from 'react';
+
+interface CountdownProps {
+  endTime: number; // Unix timestamp in seconds
+  prefix?: string;
+}
+
+const Countdown: React.FC<CountdownProps> = ({ endTime, prefix }) => {
+  const calculateTimeLeft = () => {
+    const difference = endTime * 1000 - new Date().getTime();
+    let timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  });
+
+  return (
+    <div className="text-center">
+      {prefix && <p className="text-phoenix-text-secondary mb-2">{prefix}</p>}
+      <div className="flex justify-center gap-4 text-white">
+        <div><span className="font-bold text-2xl">{String(timeLeft.days).padStart(2, '0')}</span><span className="text-xs block">Days</span></div>
+        <div><span className="font-bold text-2xl">{String(timeLeft.hours).padStart(2, '0')}</span><span className="text-xs block">Hours</span></div>
+        <div><span className="font-bold text-2xl">{String(timeLeft.minutes).padStart(2, '0')}</span><span className="text-xs block">Mins</span></div>
+        <div><span className="font-bold text-2xl">{String(timeLeft.seconds).padStart(2, '0')}</span><span className="text-xs block">Secs</span></div>
+      </div>
+    </div>
+  );
+};
+
+export default Countdown;
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\Countdown.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\Footer.tsx
+   Rozmiar: 1938 bajtów
+
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaTwitter, FaTelegramPlane, FaDiscord, FaMediumM } from 'react-icons/fa';
+
+const SOCIAL_LINKS = [
+  { href: "https://twitter.com/phoenix", icon: FaTwitter, label: "Twitter" },
+  { href: "https://t.me/phoenix", icon: FaTelegramPlane, label: "Telegram" },
+  { href: "https://discord.gg/phoenix", icon: FaDiscord, label: "Discord" },
+  { href: "https://medium.com/phoenix", icon: FaMediumM, label: "Medium" },
+];
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-phoenix-container-bg border-t border-phoenix-border">
+      <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+          <Link to="/" className="flex items-center space-x-3">
+            <img src="/images/logo.png" alt="Phoenix Swap Logo" className="h-8 w-8 rounded-full" />
+            <span className="font-semibold text-phoenix-text-primary">Phoenix Swap</span>
+          </Link>
+          <div className="flex space-x-6">
+            {SOCIAL_LINKS.map((social) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-phoenix-text-secondary hover:text-phoenix-highlight transition-colors"
+                >
+                  <Icon className="h-6 w-6" />
+                  <span className="sr-only">{social.label}</span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+        <div className="mt-8 text-center text-xs text-phoenix-text-secondary">
+          <p>&copy; {new Date().getFullYear()} Phoenix Swap. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\Footer.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\Layout.tsx
+   Rozmiar: 603 bajtów
+
+
+
+import React, { ReactNode } from 'react';
+import AppBar from './AppBar';
+import Footer from './Footer';
+import { Toaster } from 'sonner';
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div className="flex flex-col min-h-screen bg-phoenix-bg text-phoenix-text-primary">
+      <AppBar />
+      <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {children}
+      </main>
+      <Footer />
+      <Toaster position="bottom-right" richColors theme="dark" />
+    </div>
+  );
+};
+
+export default Layout;
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\Layout.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\MyMultiButton.tsx
+   Rozmiar: 365 bajtów
+
+
+
+import React from "react";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import '@solana/wallet-adapter-react-ui/styles.css';
+
+const MyMultiButton: React.FC<{ className?: string }> = ({ className = "" }) => {
+  return (
+    <WalletMultiButton className={`wallet-adapter-button-trigger ${className}`} />
+  );
+};
+
+export default MyMultiButton;
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\MyMultiButton.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\TokenModal.tsx
+   Rozmiar: 2410 bajtów
+
+
+
+import React, { useState, useEffect } from 'react';
+import { TokenInfo } from '@solana/spl-token-registry';
+
+interface TokenModalProps {
+  tokens: TokenInfo[];
+  isOpen: boolean;
+  onClose: () => void;
+  onSelectToken: (token: TokenInfo) => void;
+}
+
+const TokenModal: React.FC<TokenModalProps> = ({ tokens, isOpen, onClose, onSelectToken }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredTokens, setFilteredTokens] = useState<TokenInfo[]>([]);
+
+  useEffect(() => {
+    setFilteredTokens(
+        searchTerm === ''
+            ? tokens
+            : tokens.filter(token =>
+                token.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                token.symbol.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+    );
+  }, [searchTerm, tokens]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center" onClick={onClose}>
+      <div className="bg-phoenix-container-bg border border-phoenix-border rounded-lg p-5 w-full max-w-md max-h-[80vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
+        <h3 className="text-xl font-semibold text-center mb-4">Select a Token</h3>
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search name or symbol"
+          className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-3 mb-4 text-phoenix-text-primary outline-none focus:border-phoenix-accent"
+        />
+        <ul className="flex-grow overflow-y-auto space-y-2 pr-2">
+          {filteredTokens.map(token => (
+            <li key={token.address}>
+              <button
+                onClick={() => { onSelectToken(token); onClose(); }}
+                className="w-full flex items-center gap-3 p-2.5 rounded-md hover:bg-phoenix-border transition-colors"
+              >
+                <img src={token.logoURI || '/images/tokens/placeholder.png'} alt={token.symbol} className="h-7 w-7 rounded-full" />
+                <div>
+                  <p className="font-semibold text-left">{token.name}</p>
+                  <p className="text-xs text-phoenix-text-secondary text-left">{token.symbol}</p>
+                </div>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default TokenModal;
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\components\TokenModal.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\hooks\useAnchorProgram.ts
+   Rozmiar: 1493 bajtów
+
+
+import { useMemo } from 'react';
+import { Program, AnchorProvider } from '@coral-xyz/anchor';
+import { useConnection, useAnchorWallet } from '@solana/wallet-adapter-react';
+import { PublicKey } from '@solana/web3.js';
+import { IDL } from '../idl/phoenix_presale';
+
+export const useAnchorProgram = () => {
+    const { connection } = useConnection();
+    const wallet = useAnchorWallet();
+
+    const provider = useMemo(() => {
+        if (wallet) {
+            return new AnchorProvider(connection, wallet, AnchorProvider.defaultOptions());
+        }
+        // Read-only provider when wallet is not connected
+        const readOnlyWallet = {
+            publicKey: new PublicKey('11111111111111111111111111111111'),
+            signTransaction: () => Promise.reject("Wallet not connected"),
+            signAllTransactions: () => Promise.reject("Wallet not connected"),
+        };
+        return new AnchorProvider(connection, readOnlyWallet as any, AnchorProvider.defaultOptions());
+    }, [connection, wallet]);
+
+    const program = useMemo(() => {
+        // The program ID is now read from the IDL itself.
+        // By using `IDL as any` we let the program be of type Program<any>.
+        // This is a common workaround for when the IDL version from the file doesn't match
+        // the version of the @coral-xyz/anchor library, avoiding strict type-checking errors.
+        return new Program(IDL as any, provider);
+    }, [provider]);
+    
+    return { program, provider, wallet };
+};
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\hooks\useAnchorProgram.ts
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\hooks\usePresale.ts
+   Rozmiar: 7319 bajtów
+
+
+
+import { useCallback, useEffect, useMemo } from 'react';
+import { useAnchorProgram } from './useAnchorProgram';
+import { usePresaleStore } from '../stores/usePresaleStore';
+import { BN, web3 } from '@coral-xyz/anchor';
+import { PRESALE_ID, TOKEN_MINT_ADDRESS, TREASURY_WALLET, ASSOCIATED_TOKEN_PROGRAM_ID } from '../constants';
+import { getAssociatedTokenAddress, TOKEN_PROGRAM_ID } from '@solana/spl-token';
+import { toast } from 'sonner';
+import { Buffer } from 'buffer';
+
+export const usePresale = () => {
+    const { program, wallet } = useAnchorProgram();
+    const { setSaleData, setUserPurchaseRecord, setIsLoading } = usePresaleStore();
+
+    const fetchSaleData = useCallback(async () => {
+        setIsLoading(true);
+        try {
+            const [salePda] = web3.PublicKey.findProgramAddressSync([Buffer.from("sale"), Buffer.from(PRESALE_ID)], program.programId);
+            const saleAccount = await program.account['sale'].fetch(salePda);
+            setSaleData(saleAccount as any);
+
+            if (wallet?.publicKey) {
+                const [purchaseRecordPda] = web3.PublicKey.findProgramAddressSync([Buffer.from("purchase"), Buffer.from(PRESALE_ID), wallet.publicKey.toBuffer()], program.programId);
+                try {
+                    const record = await program.account['purchaseRecord'].fetch(purchaseRecordPda);
+                    setUserPurchaseRecord(record as any);
+                } catch (e) {
+                    setUserPurchaseRecord(null);
+                }
+            }
+        } catch (error) {
+            console.log("Presale might not be initialized yet.");
+            setSaleData(null);
+        } finally {
+            setIsLoading(false);
+        }
+    }, [program, wallet?.publicKey, setIsLoading, setSaleData, setUserPurchaseRecord]);
+
+    useEffect(() => {
+        fetchSaleData();
+    }, [fetchSaleData, wallet?.publicKey]);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            fetchSaleData();
+        }, 30000); 
+        return () => clearInterval(interval);
+    }, [fetchSaleData]);
+};
+
+export const usePresaleActions = () => {
+    const { program, wallet } = useAnchorProgram();
+    const { saleData } = usePresaleStore();
+    
+    const isAdmin = useMemo(() => {
+        if (!wallet || !saleData) return false;
+        return wallet.publicKey.equals(saleData.authority);
+    }, [wallet, saleData]);
+
+    const initializeSale = useCallback(async () => {
+        if (!wallet?.publicKey) return toast.error("Connect wallet first!");
+        
+        const [salePda] = web3.PublicKey.findProgramAddressSync([Buffer.from("sale"), Buffer.from(PRESALE_ID)], program.programId);
+        const [vaultPda] = web3.PublicKey.findProgramAddressSync([Buffer.from("vault"), Buffer.from(PRESALE_ID)], program.programId);
+        const saleTokenAccount = await getAssociatedTokenAddress(TOKEN_MINT_ADDRESS, salePda, true);
+
+        try {
+            const tx = await program.methods
+                .initialize(PRESALE_ID, new BN(0.005 * web3.LAMPORTS_PER_SOL), new BN(100 * web3.LAMPORTS_PER_SOL), new BN(5000 * web3.LAMPORTS_PER_SOL), new BN(Math.floor(Date.now() / 1000) - 3600), new BN(Math.floor(Date.now() / 1000) + 86400 * 7))
+                .accounts({ sale: salePda, vault: vaultPda, tokenMint: TOKEN_MINT_ADDRESS, saleTokenAccount: saleTokenAccount, authority: wallet.publicKey, treasury: TREASURY_WALLET, systemProgram: web3.SystemProgram.programId, tokenProgram: TOKEN_PROGRAM_ID, associatedTokenProgram: ASSOCIATED_TOKEN_PROGRAM_ID, rent: web3.SYSVAR_RENT_PUBKEY })
+                .rpc();
+            toast.success("Presale initialized successfully!", { description: `Tx: ${tx}` });
+        } catch (error: any) {
+            toast.error("Initialization failed", { description: error.message });
+            console.error(error);
+        }
+    }, [program, wallet]);
+    
+    const purchaseTokens = useCallback(async (amountSol: number) => {
+        if (!wallet?.publicKey) return toast.error("Connect wallet first!");
+        const lamports = new BN(amountSol * web3.LAMPORTS_PER_SOL);
+        try {
+            const [salePda] = web3.PublicKey.findProgramAddressSync([Buffer.from("sale"), Buffer.from(PRESALE_ID)], program.programId);
+            const [vaultPda] = web3.PublicKey.findProgramAddressSync([Buffer.from("vault"), Buffer.from(PRESALE_ID)], program.programId);
+            const [purchaseRecordPda] = web3.PublicKey.findProgramAddressSync([Buffer.from("purchase"), Buffer.from(PRESALE_ID), wallet.publicKey.toBuffer()], program.programId);
+            const tx = await program.methods.purchase(lamports)
+                .accounts({ sale: salePda, vault: vaultPda, purchaseRecord: purchaseRecordPda, purchaser: wallet.publicKey, systemProgram: web3.SystemProgram.programId })
+                .rpc();
+            toast.success("Purchase successful!", { description: `Tx: ${tx}` });
+        } catch (error: any) {
+            toast.error("Purchase failed", { description: error.message });
+            console.error(error);
+        }
+    }, [program, wallet]);
+
+    const claimTokens = useCallback(async () => {
+         if (!wallet?.publicKey || !saleData) return toast.error("Wallet or sale data not available.");
+         try {
+            const [salePda] = web3.PublicKey.findProgramAddressSync([Buffer.from("sale"), Buffer.from(PRESALE_ID)], program.programId);
+            const [purchaseRecordPda] = web3.PublicKey.findProgramAddressSync([Buffer.from("purchase"), Buffer.from(PRESALE_ID), wallet.publicKey.toBuffer()], program.programId);
+            const purchaserTokenAccount = await getAssociatedTokenAddress(saleData.tokenMint, wallet.publicKey);
+            const tx = await program.methods.claimTokens()
+                .accounts({ sale: salePda, purchaseRecord: purchaseRecordPda, purchaser: wallet.publicKey, tokenMint: saleData.tokenMint, purchaserTokenAccount, saleTokenAccount: saleData.saleTokenAccount, tokenProgram: TOKEN_PROGRAM_ID, associatedTokenProgram: ASSOCIATED_TOKEN_PROGRAM_ID, systemProgram: web3.SystemProgram.programId })
+                .rpc();
+            toast.success("Tokens claimed!", { description: `Tx: ${tx}` });
+         } catch (error: any) {
+            toast.error("Claim failed", { description: error.message });
+            console.error(error);
+         }
+    }, [program, wallet, saleData]);
+
+    const withdrawSol = useCallback(async () => {
+        if (!wallet?.publicKey) return toast.error("Connect wallet first!");
+        try {
+            const [salePda] = web3.PublicKey.findProgramAddressSync([Buffer.from("sale"), Buffer.from(PRESALE_ID)], program.programId);
+            const [vaultPda] = web3.PublicKey.findProgramAddressSync([Buffer.from("vault"), Buffer.from(PRESALE_ID)], program.programId);
+            const tx = await program.methods.withdrawSol()
+                .accounts({ sale: salePda, vault: vaultPda, authority: wallet.publicKey, treasury: TREASURY_WALLET, systemProgram: web3.SystemProgram.programId })
+                .rpc();
+            toast.success("SOL withdrawn successfully!", { description: `Tx: ${tx}` });
+        } catch (error: any) {
+            toast.error("Withdrawal failed", { description: error.message });
+        }
+    }, [program, wallet]);
+
+    return { purchaseTokens, claimTokens, initializeSale, withdrawSol, isAdmin };
+};
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\hooks\usePresale.ts
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\idl\phoenix_presale.ts
+   Rozmiar: 10453 bajtów
+
+
+
+export type PhoenixPresale = {
+  "version": "0.1.0",
+  "name": "phoenix_presale",
+  "address": "JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        { "name": "sale", "isMut": true, "isSigner": false, "pda": { "seeds": [{"kind": "const", "type": "string", "value": "sale"}, {"kind": "arg", "type": "string", "path": "presaleId"}] } },
+        { "name": "vault", "isMut": true, "isSigner": false, "pda": { "seeds": [{"kind": "const", "type": "string", "value": "vault"}, {"kind": "arg", "type": "string", "path": "presaleId"}] } },
+        { "name": "tokenMint", "isMut": false, "isSigner": false },
+        { "name": "saleTokenAccount", "isMut": true, "isSigner": false },
+        { "name": "authority", "isMut": true, "isSigner": true },
+        { "name": "treasury", "isMut": true, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false },
+        { "name": "tokenProgram", "isMut": false, "isSigner": false },
+        { "name": "associatedTokenProgram", "isMut": false, "isSigner": false },
+        { "name": "rent", "isMut": false, "isSigner": false }
+      ],
+      "args": [
+        { "name": "presaleId", "type": "string" },
+        { "name": "priceLamports", "type": "u64" },
+        { "name": "softCapLamports", "type": "u64" },
+        { "name": "hardCapLamports", "type": "u64" },
+        { "name": "startTime", "type": "i64" },
+        { "name": "endTime", "type": "i64" }
+      ]
+    },
+    {
+      "name": "purchase",
+      "accounts": [
+        { "name": "sale", "isMut": true, "isSigner": false },
+        { "name": "vault", "isMut": true, "isSigner": false },
+        { "name": "purchaseRecord", "isMut": true, "isSigner": false },
+        { "name": "purchaser", "isMut": true, "isSigner": true },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [
+        { "name": "amountLamports", "type": "u64" }
+      ]
+    },
+    {
+      "name": "claimTokens",
+      "accounts": [
+        { "name": "sale", "isMut": true, "isSigner": false },
+        { "name": "purchaseRecord", "isMut": true, "isSigner": false },
+        { "name": "purchaser", "isMut": true, "isSigner": true },
+        { "name": "tokenMint", "isMut": false, "isSigner": false },
+        { "name": "purchaserTokenAccount", "isMut": true, "isSigner": false },
+        { "name": "saleTokenAccount", "isMut": true, "isSigner": false },
+        { "name": "tokenProgram", "isMut": false, "isSigner": false },
+        { "name": "associatedTokenProgram", "isMut": false, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": []
+    },
+    {
+      "name": "withdrawSol",
+      "accounts": [
+        { "name": "sale", "isMut": true, "isSigner": false },
+        { "name": "vault", "isMut": true, "isSigner": false },
+        { "name": "authority", "isMut": true, "isSigner": true },
+        { "name": "treasury", "isMut": true, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "sale",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "presaleId", "type": "string" },
+          { "name": "authority", "type": "publicKey" },
+          { "name": "treasury", "type": "publicKey" },
+          { "name": "vault", "type": "publicKey" },
+          { "name": "tokenMint", "type": "publicKey" },
+          { "name": "saleTokenAccount", "type": "publicKey" },
+          { "name": "priceLamports", "type": "u64" },
+          { "name": "startTime", "type": "i64" },
+          { "name": "endTime", "type": "i64" },
+          { "name": "softCapLamports", "type": "u64" },
+          { "name": "hardCapLamports", "type": "u64" },
+          { "name": "totalRaised", "type": "u64" },
+          { "name": "isActive", "type": "bool" }
+        ]
+      }
+    },
+    {
+      "name": "purchaseRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "purchaser", "type": "publicKey" },
+          { "name": "amountSpent", "type": "u64" },
+          { "name": "claimed", "type": "bool" }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    { "code": 6000, "name": "SaleNotStarted", "msg": "The sale has not started yet." },
+    { "code": 6001, "name": "SaleEnded", "msg": "The sale has already ended." },
+    { "code": 6002, "name": "SaleNotActive", "msg": "The sale is currently not active." },
+    { "code": 6003, "name": "HardCapExceeded", "msg": "The hard cap for this sale has been reached." },
+    { "code": 6004, "name": "SaleNotEndedYet", "msg": "The sale has not ended yet, you cannot withdraw." },
+    { "code": 6005, "name": "SoftCapNotReached", "msg": "Soft cap not reached, withdrawal not allowed." },
+    { "code": 6006, "name": "AlreadyClaimed", "msg": "Tokens have already been claimed." },
+    { "code": 6007, "name": "Unauthorized", "msg": "You are not authorized to perform this action."}
+  ],
+  "metadata": {
+    "name": "phoenix_presale",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "address": "JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H"
+  }
+};
+export const IDL: PhoenixPresale = JSON.parse(JSON.stringify({
+  "version": "0.1.0",
+  "name": "phoenix_presale",
+  "address": "JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        { "name": "sale", "isMut": true, "isSigner": false, "pda": { "seeds": [{"kind": "const", "type": "string", "value": "sale"}, {"kind": "arg", "type": "string", "path": "presaleId"}] } },
+        { "name": "vault", "isMut": true, "isSigner": false, "pda": { "seeds": [{"kind": "const", "type": "string", "value": "vault"}, {"kind": "arg", "type": "string", "path": "presaleId"}] } },
+        { "name": "tokenMint", "isMut": false, "isSigner": false },
+        { "name": "saleTokenAccount", "isMut": true, "isSigner": false },
+        { "name": "authority", "isMut": true, "isSigner": true },
+        { "name": "treasury", "isMut": true, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false },
+        { "name": "tokenProgram", "isMut": false, "isSigner": false },
+        { "name": "associatedTokenProgram", "isMut": false, "isSigner": false },
+        { "name": "rent", "isMut": false, "isSigner": false }
+      ],
+      "args": [
+        { "name": "presaleId", "type": "string" },
+        { "name": "priceLamports", "type": "u64" },
+        { "name": "softCapLamports", "type": "u64" },
+        { "name": "hardCapLamports", "type": "u64" },
+        { "name": "startTime", "type": "i64" },
+        { "name": "endTime", "type": "i64" }
+      ]
+    },
+    {
+      "name": "purchase",
+      "accounts": [
+        { "name": "sale", "isMut": true, "isSigner": false },
+        { "name": "vault", "isMut": true, "isSigner": false },
+        { "name": "purchaseRecord", "isMut": true, "isSigner": false },
+        { "name": "purchaser", "isMut": true, "isSigner": true },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [
+        { "name": "amountLamports", "type": "u64" }
+      ]
+    },
+    {
+      "name": "claimTokens",
+      "accounts": [
+        { "name": "sale", "isMut": true, "isSigner": false },
+        { "name": "purchaseRecord", "isMut": true, "isSigner": false },
+        { "name": "purchaser", "isMut": true, "isSigner": true },
+        { "name": "tokenMint", "isMut": false, "isSigner": false },
+        { "name": "purchaserTokenAccount", "isMut": true, "isSigner": false },
+        { "name": "saleTokenAccount", "isMut": true, "isSigner": false },
+        { "name": "tokenProgram", "isMut": false, "isSigner": false },
+        { "name": "associatedTokenProgram", "isMut": false, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": []
+    },
+    {
+      "name": "withdrawSol",
+      "accounts": [
+        { "name": "sale", "isMut": true, "isSigner": false },
+        { "name": "vault", "isMut": true, "isSigner": false },
+        { "name": "authority", "isMut": true, "isSigner": true },
+        { "name": "treasury", "isMut": true, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "sale",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "presaleId", "type": "string" },
+          { "name": "authority", "type": "publicKey" },
+          { "name": "treasury", "type": "publicKey" },
+          { "name": "vault", "type": "publicKey" },
+          { "name": "tokenMint", "type": "publicKey" },
+          { "name": "saleTokenAccount", "type": "publicKey" },
+          { "name": "priceLamports", "type": "u64" },
+          { "name": "startTime", "type": "i64" },
+          { "name": "endTime", "type": "i64" },
+          { "name": "softCapLamports", "type": "u64" },
+          { "name": "hardCapLamports", "type": "u64" },
+          { "name": "totalRaised", "type": "u64" },
+          { "name": "isActive", "type": "bool" }
+        ]
+      }
+    },
+    {
+      "name": "purchaseRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "purchaser", "type": "publicKey" },
+          { "name": "amountSpent", "type": "u64" },
+          { "name": "claimed", "type": "bool" }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    { "code": 6000, "name": "SaleNotStarted", "msg": "The sale has not started yet." },
+    { "code": 6001, "name": "SaleEnded", "msg": "The sale has already ended." },
+    { "code": 6002, "name": "SaleNotActive", "msg": "The sale is currently not active." },
+    { "code": 6003, "name": "HardCapExceeded", "msg": "The hard cap for this sale has been reached." },
+    { "code": 6004, "name": "SaleNotEndedYet", "msg": "The sale has not ended yet, you cannot withdraw." },
+    { "code": 6005, "name": "SoftCapNotReached", "msg": "Soft cap not reached, withdrawal not allowed." },
+    { "code": 6006, "name": "AlreadyClaimed", "msg": "Tokens have already been claimed." },
+    { "code": 6007, "name": "Unauthorized", "msg": "You are not authorized to perform this action."}
+  ],
+  "metadata": {
+    "name": "phoenix_presale",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "address": "JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H"
+  }
+}));
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\idl\phoenix_presale.ts
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\B2MPage.tsx
+   Rozmiar: 7046 bajtów
+
+
+
+import React, { useState } from 'react';
+import { ChevronDownIcon, QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
+
+interface PreviousB2MProject {
+  id: string;
+  name: string;
+  tokenSymbol: string;
+  imageUrl: string;
+  phnxBurned: number;
+  tokensMinted: number;
+  date: string;
+  description?: string;
+}
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+const PREVIOUS_PROJECTS: PreviousB2MProject[] = [
+  { id: 'project-gamma', name: 'Project Gamma', tokenSymbol: 'GAMMA', imageUrl: '/images/b2m/project-gamma.png', phnxBurned: 500000, tokensMinted: 1000000, date: 'Jan 15, 2025', description: 'A successful launch of the Gamma yield aggregation protocol.' },
+];
+
+const FAQ_ITEMS: FaqItem[] = [
+  { question: "What is Burn to Mint (B2M)?", answer: "Burn to Mint is an innovative mechanism where users burn (permanently destroy) $PHNX tokens to receive new tokens from participating projects launching on PhoenixSwap. This helps create a deflationary aspect for $PHNX and provides a fair launch method for new tokens." },
+  { question: "How do I participate in a B2M event?", answer: "During an active B2M event, you will need to connect your wallet, ensure you have sufficient $PHNX, specify the amount of $PHNX you wish to burn, and confirm the transaction. The new tokens will then be claimable according to the event's schedule." },
+  { question: "What are the benefits of participating in B2M?", answer: "Participants get early access to new project tokens, often at a favorable rate. Burning $PHNX also contributes to the overall health and scarcity of the Phoenix Token." },
+  { question: "Is there a limit to how much $PHNX I can burn?", answer: "Each B2M event may have its own specific limits (minimum/maximum burn amount per wallet) or overall cap. Please refer to the details of each specific event." },
+];
+
+const FaqAccordionItem: React.FC<{ item: FaqItem; isOpen: boolean; onClick: () => void }> = ({ item, isOpen, onClick }) => {
+  return (
+    <div className="border-b border-phoenix-border">
+      <button onClick={onClick} className="flex justify-between items-center w-full py-4 text-left text-phoenix-text-primary hover:text-phoenix-accent transition">
+        <span className="font-medium">{item.question}</span>
+        <ChevronDownIcon className={`w-5 h-5 transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+      {isOpen && ( <div className="pb-4 text-sm text-phoenix-text-secondary"><p>{item.answer}</p></div> )}
+    </div>
+  );
+};
+
+const B2MPage: React.FC = () => {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const toggleFaq = (index: number) => { setOpenFaqIndex(openFaqIndex === index ? null : index); };
+  
+  return (
+    <div className="flex-1 w-full py-8 px-4">
+    <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-10">
+           <h1 className="text-4xl md:text-5xl font-bold text-phoenix-text-primary mb-3">Burn to Mint</h1>
+           <p className="text-lg text-phoenix-text-secondary max-w-2xl mx-auto">Discover new token launches on PhoenixSwap by burning $PHNX. A unique way to get early access and support the ecosystem.</p>
+        </div>
+
+        <div className="bg-phoenix-container-bg p-6 rounded-xl shadow-xl border border-phoenix-border mb-10 text-center">
+            <h2 className="text-2xl font-semibold text-phoenix-text-primary mb-3">Upcoming B2M Events</h2>
+            <p className="text-phoenix-text-secondary mb-4">No active Burn to Mint events at the moment. Follow our announcements for the next launch!</p>
+        </div>
+
+        {PREVIOUS_PROJECTS.length > 0 && (
+        <div className="mb-10">
+            <h2 className="text-2xl font-semibold text-phoenix-text-primary mb-6">Previous Events</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {PREVIOUS_PROJECTS.map(project => (
+                    <div key={project.id} className="bg-phoenix-bg p-5 rounded-lg shadow-lg border border-phoenix-border">
+                        <img src={project.imageUrl} alt={project.name} className="w-16 h-16 rounded-full mx-auto mb-3 object-cover" />
+                        <h3 className="text-xl font-bold text-phoenix-accent text-center mb-1">{project.name} ({project.tokenSymbol})</h3>
+                        <p className="text-xs text-phoenix-text-secondary text-center mb-3">{project.date}</p>
+                        {project.description && <p className="text-sm text-phoenix-text-secondary mb-2 text-center line-clamp-2">{project.description}</p>}
+                        <div className="text-xs text-phoenix-text-secondary space-y-0.5">
+                            <p><strong>$PHNX Burned:</strong> {project.phnxBurned.toLocaleString()}</p>
+                            <p><strong>{project.tokenSymbol} Minted:</strong> {project.tokensMinted.toLocaleString()}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+        )}
+        
+        <div className="bg-phoenix-container-bg p-6 rounded-xl shadow-xl border border-phoenix-border mb-10">
+            <h2 className="text-2xl font-semibold text-phoenix-text-primary mb-6 text-center">How B2M Works - The Steps</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                {[
+                    { step: 1, title: "Connect Wallet", description: "Link your Solana wallet." },
+                    { step: 2, title: "Get $PHNX", description: "Acquire $PHNX tokens." },
+                    { step: 3, title: "Burn to Mint", description: "During an active event, burn your $PHNX." },
+                    { step: 4, title: "Claim Rewards", description: "Claim your newly minted tokens." },
+                ].map(item => (
+                    <div key={item.step} className="flex flex-col items-center">
+                        <div className="w-12 h-12 rounded-full bg-phoenix-accent text-black flex items-center justify-center font-bold text-xl mb-3">{item.step}</div>
+                        <h4 className="font-semibold text-phoenix-text-primary mb-1">{item.title}</h4>
+                        <p className="text-xs text-phoenix-text-secondary">{item.description}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <div className="bg-phoenix-container-bg p-6 rounded-xl shadow-xl border border-phoenix-border">
+            <h2 className="text-2xl font-semibold text-phoenix-text-primary mb-4 flex items-center">
+                <QuestionMarkCircleIcon className="h-7 w-7 text-phoenix-accent mr-3" />
+                Frequently Asked Questions
+            </h2>
+            <div className="divide-y divide-phoenix-border">
+                {FAQ_ITEMS.map((item, index) => (
+                    <FaqAccordionItem key={index} item={item} isOpen={openFaqIndex === index} onClick={() => toggleFaq(index)} />
+                ))}
+            </div>
+        </div>
+    </div>
+    </div>
+  );
+};
+
+export default B2MPage;
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\B2MPage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\BankPage.tsx
+   Rozmiar: 7101 bajtów
+
+
+
+import React, { useState, useEffect } from 'react';
+import { useWallet } from '@solana/wallet-adapter-react';
+import MyMultiButton from '../components/MyMultiButton';
+
+interface StakingToken {
+  symbol: string;
+  balance: number;
+  stakedAmount: number;
+  earnedRewards: number;
+  logoURI: string;
+}
+
+interface StakingOption {
+  type: 'auto' | 'manual';
+  apy: string | null;
+  staked: boolean;
+  details?: string;
+}
+
+const BankPage: React.FC = () => {
+  const { connected, publicKey } = useWallet();
+  const [stakeAmount, setStakeAmount] = useState<string>('');
+  const [phnxData, setPhnxData] = useState<StakingToken>({
+    symbol: 'PHNX',
+    balance: 0,
+    stakedAmount: 0,
+    earnedRewards: 0,
+    logoURI: '/images/logo.png',
+  });
+  const [stakingOptions, setStakingOptions] = useState<StakingOption[]>([
+    { type: 'auto', apy: '120.5%', staked: false, details: "Your staked PHNX is automatically compounded for higher returns." },
+    { type: 'manual', apy: '85.2%', staked: false, details: "Manually claim your rewards and re-stake as you wish." },
+  ]);
+  const [selectedStakingType, setSelectedStakingType] = useState<'auto' | 'manual' | null>(null);
+
+  useEffect(() => {
+    if (connected && publicKey) {
+      setPhnxData(prev => ({
+         ...prev,
+        balance: Math.random() * 10000,
+        stakedAmount: Math.random() * 5000,
+        earnedRewards: Math.random() * 100,
+      }));
+    } else {
+      setPhnxData(prev => ({ ...prev, balance: 0, stakedAmount: 0, earnedRewards: 0 }));
+      setStakingOptions(prevOptions => prevOptions.map(opt => ({...opt, staked: false})));
+      setSelectedStakingType(null);
+    }
+  }, [connected, publicKey]);
+
+  const handleStake = () => {
+    alert(`Staking ${stakeAmount} ${phnxData.symbol} (simulation).`);
+    setStakeAmount('');
+  };
+  const handleUnstake = () => alert(`Unstaking all PHNX (simulation).`);
+  const handleClaimRewards = () => alert(`Claiming ${phnxData.earnedRewards.toFixed(4)} ${phnxData.symbol} rewards (simulation).`);
+  const autoCompoundBounty = 200;
+
+  return (
+    <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-8 md:mb-10">
+            <h1 className="text-3xl md:text-4xl font-bold text-phoenix-text-primary mb-2">Phoenix Bank</h1>
+            <p className="text-md text-phoenix-text-secondary max-w-lg mx-auto">Stake {phnxData.symbol} tokens to earn rewards and participate in the ecosystem.</p>
+        </div>
+
+        <div className="bg-phoenix-container-bg p-4 rounded-xl shadow-lg border border-phoenix-border mb-8 text-center">
+            <h3 className="text-lg font-semibold text-phoenix-accent mb-1">Auto Compound Bounty</h3>
+            <p className="text-xs text-phoenix-text-secondary mb-2">Claim this bounty to trigger auto-compounding for all users in the auto-pool.</p>
+            <button className="bg-phoenix-border text-phoenix-text-primary hover:bg-phoenix-border/70 transition-colors py-1.5 px-4 text-sm rounded-md">Claim Bounty: {autoCompoundBounty.toFixed(2)} {phnxData.symbol}</button>
+        </div>
+
+        <div className="bg-phoenix-container-bg p-6 rounded-xl shadow-xl border border-phoenix-border">
+            <div className="flex items-center mb-6">
+                <img src={phnxData.logoURI} alt={phnxData.symbol} className="w-8 h-8 rounded-full mr-3" />
+                <h2 className="text-2xl font-semibold text-phoenix-text-primary">Stake {phnxData.symbol}</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {stakingOptions.map(option => (
+                <div key={option.type} className={`p-4 rounded-lg border cursor-pointer transition-all ${selectedStakingType === option.type ? 'border-phoenix-accent ring-2 ring-phoenix-accent bg-phoenix-bg' : 'border-phoenix-border hover:border-phoenix-accent/70 bg-phoenix-bg/50'}`} onClick={() => setSelectedStakingType(option.type)}>
+                    <div className="flex justify-between items-center mb-1">
+                        <h4 className="text-lg font-semibold text-phoenix-text-primary">{option.type === 'auto' ? 'Automatic' : 'Manual'} Staking</h4>
+                    </div>
+                    <p className="text-xs text-phoenix-text-secondary mb-2">{option.details}</p>
+                    <p className="text-sm font-medium">APY: <span className={option.apy ? "text-phoenix-highlight" : "text-phoenix-text-secondary"}>{option.apy || "Not Voted"}</span></p>
+                </div>
+                ))}
+            </div>
+
+            {selectedStakingType && (
+                <div className="border-t border-phoenix-border pt-6">
+                    {connected ? (
+                        <>
+                            <div className="mb-4">
+                                <label htmlFor="stakeAmount" className="block text-sm font-medium text-phoenix-text-secondary mb-1">Amount to Stake</label>
+                                <input type="number" id="stakeAmount" value={stakeAmount} onChange={(e) => setStakeAmount(e.target.value)} placeholder="0.0" className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-3 text-phoenix-text-primary outline-none focus:border-phoenix-accent placeholder-phoenix-text-secondary/70" />
+                                <p className="text-xs text-phoenix-text-secondary mt-1">Wallet Balance: {phnxData.balance.toFixed(4)} {phnxData.symbol}</p>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                                <button onClick={handleStake} className="w-full bg-phoenix-accent text-black font-bold py-2.5 text-sm rounded-md" disabled={!stakeAmount || parseFloat(stakeAmount) <= 0}>Stake {phnxData.symbol}</button>
+                                <button onClick={handleUnstake} className="w-full bg-phoenix-border text-white font-bold py-2.5 text-sm rounded-md" disabled={phnxData.stakedAmount <= 0}>Unstake All</button>
+                            </div>
+                            <div className="bg-phoenix-bg p-4 rounded-lg border border-phoenix-border">
+                                <p className="text-sm text-phoenix-text-secondary mb-1">Your Staked {phnxData.symbol}: <span className="text-xl font-semibold text-phoenix-text-primary">{phnxData.stakedAmount.toFixed(4)}</span></p>
+                                <p className="text-sm text-phoenix-text-secondary mb-1">{phnxData.symbol} Earned: <span className="text-xl font-semibold text-phoenix-highlight">{phnxData.earnedRewards.toFixed(4)}</span></p>
+                                <button onClick={handleClaimRewards} className="w-full mt-3 bg-phoenix-accent bg-opacity-80 hover:bg-opacity-100 text-black py-2 text-sm rounded-md" disabled={phnxData.earnedRewards <= 0}>Claim Rewards</button>
+                            </div>
+                        </>
+                    ) : (
+                        <div className="text-center py-6"><MyMultiButton className="!h-12 !text-base" /></div>
+                    )}
+                </div>
+            )}
+        </div>
+    </div>
+  );
+};
+
+export default BankPage;
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\BankPage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\ChatPage.tsx
+   Rozmiar: 1403 bajtów
+
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+export default function PhoenixAiChatPage() {
+  return (
+    <div className="max-w-4xl mx-auto">
+      <div className="navbar bg-phoenix-container-bg/50 rounded-xl mb-4">
+        <div className="flex-1">
+          <Link to="/" className="btn btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" /></svg>
+            Back
+          </Link>
+        </div>
+        <div className="flex-none">
+          <h1 className="text-xl font-bold">Phoenix AI Chat</h1>
+        </div>
+      </div>
+
+      <div className="hero rounded-xl bg-phoenix-container-bg/80">
+        <div className="hero-content text-center py-16">
+          <div className="max-w-md">
+            <h2 className="text-3xl font-bold text-phoenix-accent mb-4">Welcome to Phoenix AI Chat!</h2>
+            <p className="py-6 text-phoenix-text-secondary">
+              This is where your advanced AI assistant will soon reside. It will help with market analysis, answer questions, and support your investment decisions in the Solana ecosystem.
+            </p>
+            <p className="font-bold">Coming Soon! 🚀</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\ChatPage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\FarmsPage.tsx
+   Rozmiar: 8030 bajtów
+
+
+
+import React, { useState } from 'react';
+import { useWallet } from '@solana/wallet-adapter-react';
+import { ArchiveBoxXMarkIcon, MagnifyingGlassIcon, SparklesIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
+import MyMultiButton from '../components/MyMultiButton';
+
+interface Farm {
+  id: string;
+  lpTokenName: string;
+  tokenA_logo: string;
+  tokenB_logo: string;
+  apr: string;
+  earned: number;
+  stakedLpAmount: number;
+  totalLiquidity: string;
+  rewardsTokenSymbol: string;
+  getLpLink: string;
+}
+
+const FARMS_DATA: Farm[] = [
+  { id: 'phnx-sol-lp', lpTokenName: 'PHNX-SOL LP', tokenA_logo: '/images/logo.png', tokenB_logo: '/images/tokens/sol.png', apr: '150.25%', earned: 0, stakedLpAmount: 0, totalLiquidity: '$250,000', rewardsTokenSymbol: 'PHNX', getLpLink: '/liquidity?tokenA=phnx&tokenB=sol', },
+  { id: 'usdc-sol-lp', lpTokenName: 'USDC-SOL LP', tokenA_logo: '/images/tokens/usdc.png', tokenB_logo: '/images/tokens/sol.png', apr: '85.60%', earned: 0, stakedLpAmount: 0, totalLiquidity: '$1,200,000', rewardsTokenSymbol: 'PHNX', getLpLink: '/liquidity?tokenA=usdc&tokenB=sol', },
+];
+
+const FarmCard: React.FC<{ farm: Farm; connected: boolean }> = ({ farm, connected }) => {
+  const [stakeAmount, setStakeAmount] = useState('');
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleStake = () => alert(`Staking ${stakeAmount} ${farm.lpTokenName} (simulation)`);
+  const handleUnstake = () => alert(`Unstaking all ${farm.lpTokenName} (simulation)`);
+  const handleHarvest = () => alert(`Harvesting ${farm.earned} ${farm.rewardsTokenSymbol} (simulation)`);
+
+  return (
+    <div className="bg-phoenix-bg p-4 rounded-lg shadow-md border border-phoenix-border transition-all duration-300">
+      <div className="flex justify-between items-center mb-3">
+        <div className="flex items-center">
+          <div className="flex -space-x-2 mr-3">
+            <img src={farm.tokenA_logo} alt="Token A" className="w-8 h-8 rounded-full border-2 border-phoenix-container-bg object-cover" />
+            <img src={farm.tokenB_logo} alt="Token B" className="w-8 h-8 rounded-full border-2 border-phoenix-container-bg object-cover" />
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-phoenix-text-primary">{farm.lpTokenName}</h3>
+            <Link to={farm.getLpLink} className="text-xs text-phoenix-accent hover:underline">Get LP Tokens</Link>
+          </div>
+        </div>
+        <button onClick={() => setIsExpanded(!isExpanded)} aria-expanded={isExpanded}>
+          <ChevronDownIcon className={`w-5 h-5 text-phoenix-text-secondary transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
+        </button>
+      </div>
+
+      <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm mb-3">
+        <div className="text-phoenix-text-secondary">APR:</div>
+        <div className="text-phoenix-highlight font-medium text-right">{farm.apr}</div>
+        <div className="text-phoenix-text-secondary">Earn:</div>
+        <div className="text-phoenix-text-primary font-medium text-right">{farm.rewardsTokenSymbol}</div>
+        <div className="text-phoenix-text-secondary">Total Liquidity:</div>
+        <div className="text-phoenix-text-primary font-medium text-right">{farm.totalLiquidity}</div>
+      </div>
+
+      {isExpanded && (
+        <div className="border-t border-phoenix-border pt-4 mt-3 space-y-4">
+          {connected ? (
+            <>
+              <div>
+                <div className="flex justify-between text-xs text-phoenix-text-secondary mb-1">
+                  <span>{farm.rewardsTokenSymbol} Earned</span>
+                  <span>{farm.earned.toFixed(4)}</span>
+                </div>
+                <button onClick={handleHarvest} disabled={farm.earned <= 0} className="btn-secondary-phoenix !py-1.5 !text-xs">Harvest</button>
+              </div>
+
+              <div>
+                <div className="flex justify-between text-xs text-phoenix-text-secondary mb-1">
+                   <span>Your Staked LP</span>
+                   <span>{farm.stakedLpAmount.toFixed(4)}</span>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <input type="number" placeholder="Amount to stake" value={stakeAmount} onChange={(e) => setStakeAmount(e.target.value)} className="w-full bg-phoenix-container-bg border border-phoenix-border rounded-md p-1.5 text-xs text-phoenix-text-primary outline-none focus:border-phoenix-accent"/>
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <button onClick={handleStake} className="btn-primary-phoenix !flex-1 !py-1.5 !text-xs">Stake</button>
+                  <button onClick={handleUnstake} disabled={farm.stakedLpAmount <= 0} className="btn-secondary-phoenix !flex-1 !py-1.5 !text-xs">Unstake All</button>
+                </div>
+              </div>
+            </>
+          ) : (
+             <MyMultiButton className="!w-full !h-10 !text-sm" />
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+const FarmsPage: React.FC = () => {
+    const { connected } = useWallet();
+    const [searchTerm, setSearchTerm] = useState('');
+    const [stakedOnly, setStakedOnly] = useState(false);
+
+    const filteredFarms = FARMS_DATA.filter(farm => {
+        const matchesSearch = farm.lpTokenName.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesStaked = stakedOnly ? farm.stakedLpAmount > 0 : true;
+        return matchesSearch && matchesStaked;
+    });
+
+    return (
+        <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8 md:mb-10">
+                <SparklesIcon className="h-12 w-12 text-phoenix-accent mx-auto mb-3" />
+                <h1 className="text-3xl md:text-4xl font-bold text-phoenix-text-primary mb-2">Phoenix Farms</h1>
+                <p className="text-md text-phoenix-text-secondary max-w-lg mx-auto">Stake your LP (Liquidity Provider) tokens to earn $PHNX and other rewards.</p>
+            </div>
+            <div className="mb-6 flex flex-col sm:flex-row gap-4 items-center">
+                <div className="relative flex-grow w-full sm:w-auto">
+                    <MagnifyingGlassIcon className="h-5 w-5 text-phoenix-text-secondary absolute left-3 top-1/2 -translate-y-1/2" />
+                    <input type="text" placeholder="Search Farms (e.g., PHNX-SOL)" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-2.5 pl-10 text-phoenix-text-primary outline-none focus:border-phoenix-accent placeholder-phoenix-text-secondary"/>
+                </div>
+                <div className="flex items-center">
+                    <label htmlFor="stakedOnly" className="text-sm text-phoenix-text-secondary mr-2">Staked only:</label>
+                    <button onClick={() => setStakedOnly(!stakedOnly)} className={`relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none ${stakedOnly ? 'bg-phoenix-accent' : 'bg-phoenix-border'}`}>
+                        <span className={`inline-block w-4 h-4 transform bg-white rounded-full transition-transform ${stakedOnly ? 'translate-x-6' : 'translate-x-1'}`} />
+                    </button>
+                </div>
+            </div>
+
+            {filteredFarms.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {filteredFarms.map(farm => (
+                      <FarmCard key={farm.id} farm={farm} connected={connected} />
+                    ))}
+                </div>
+            ) : (
+                <div className="text-center py-10 text-phoenix-text-secondary bg-phoenix-container-bg rounded-lg border border-phoenix-border">
+                    <ArchiveBoxXMarkIcon className="h-12 w-12 mx-auto mb-2 text-gray-500" />
+                    <p>No farms match your criteria.</p>
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default FarmsPage;
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\FarmsPage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\HomePage.tsx
+   Rozmiar: 8967 bajtów
+
+
+
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  ArrowRightIcon,
+  BanknotesIcon,
+  ChevronDownIcon,
+  FireIcon,
+  PuzzlePieceIcon,
+  RocketLaunchIcon,
+  BoltIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/24/outline";
+
+interface FeatureCardProps {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  href: string;
+}
+
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description, href }) => (
+  <Link
+    to={href}
+    className="relative group rounded-xl p-6 bg-phoenix-container-bg border border-phoenix-border hover:border-phoenix-accent/70 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+  >
+    <div className="absolute -inset-px bg-gradient-to-r from-yellow-500/10 via-orange-500/10 to-red-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+    <div className="relative z-10 flex flex-col h-full">
+      <div className="w-14 h-14 mb-4 rounded-lg bg-gradient-to-r from-yellow-500/10 via-orange-500/10 to-red-500/10 flex items-center justify-center border border-phoenix-border group-hover:border-phoenix-accent/50 transition-all duration-300">
+        <Icon className="h-7 w-7 text-orange-400 group-hover:text-orange-300 transition-colors duration-300" />
+      </div>
+      <h3 className="text-lg md:text-xl font-bold mb-2 text-phoenix-text-primary">{title}</h3>
+      <p className="text-sm text-phoenix-text-secondary leading-relaxed flex-grow">{description}</p>
+    </div>
+  </Link>
+);
+
+interface HowItWorksStepProps {
+  stepNumber: string;
+  title: string;
+  description: string;
+}
+
+const HowItWorksStep: React.FC<HowItWorksStepProps> = ({ stepNumber, title, description }) => (
+  <div className="relative z-10 flex flex-col items-center text-center">
+    <div className="w-16 h-16 mb-4 rounded-full bg-gradient-to-br from-phoenix-accent to-orange-500 text-black flex items-center justify-center font-bold text-2xl shadow-lg border-2 border-phoenix-highlight/50">
+      {stepNumber}
+    </div>
+    <h4 className="font-semibold text-phoenix-text-primary text-lg mb-1.5">{title}</h4>
+    <p className="text-sm text-phoenix-text-secondary leading-relaxed max-w-xs">{description}</p>
+  </div>
+);
+
+const HomePage: React.FC = () => {
+  const features: FeatureCardProps[] = [
+    { icon: BoltIcon, title: "Lightning Fast Swaps", description: "Leverage the full power of the Solana network for near-instantaneous trade executions.", href: "/swap" },
+    { icon: BanknotesIcon, title: "Low Transaction Fees", description: "Keep more of your assets with ultra-low transaction costs thanks to Solana's efficiency.", href: "/swap" },
+    { icon: CurrencyDollarIcon, title: "Yield Farming", description: "Become a liquidity provider and earn passive income by staking your LP tokens in our farms.", href: "/farms" },
+    { icon: FireIcon, title: "Burn to Mint", description: "Participate in our innovative token launch model by burning $PHNX for early access.", href: "/b2m" },
+    { icon: PuzzlePieceIcon, title: "Quests", description: "Engage with the platform through interactive quests to earn exclusive XP and token rewards.", href: "/quests" },
+    { icon: RocketLaunchIcon, title: "Launchpad", description: "Discover the next wave of innovation on Solana through our curated and secure presale platform.", href: "/launchpad" },
+  ];
+
+  return (
+    <div className="flex-1 w-full">
+        <section id="hero" className="overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="flex flex-col gap-6 text-center lg:text-left">
+              <h3 className="inline-block rounded-full text-base md:text-lg font-semibold text-phoenix-accent">
+                Powered by <span className="text-phoenix-highlight">Solana</span>
+              </h3>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                <span className="block text-phoenix-text-primary">Rise from the ashes.</span>
+                <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 bg-clip-text text-transparent">Trade with Phoenix.</span>
+              </h1>
+              <p className="text-lg md:text-xl text-phoenix-text-secondary max-w-[600px] mx-auto lg:mx-0">
+                Experience the rebirth of DeFi trading with PhoenixSwap. Fast, secure, and built to soar.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-4">
+                <Link to="/swap" className="inline-flex items-center justify-center rounded-md bg-phoenix-accent px-6 py-3 text-base font-semibold text-black hover:bg-orange-400 transition">
+                  Start Trading <ArrowRightIcon className="ml-2 h-5 w-5" />
+                </Link>
+                <a href="#features" className="inline-flex items-center justify-center rounded-md border border-phoenix-accent px-6 py-3 text-base font-semibold text-phoenix-accent hover:bg-phoenix-accent/10 transition">
+                  Learn More <ChevronDownIcon className="ml-2 h-5 w-5" />
+                </a>
+              </div>
+            </div>
+            <div className="hidden md:flex justify-center lg:justify-end">
+              <img alt="PhoenixSwap Logo" width={500} height={500} className="object-contain w-[300px] sm:w-[450px] lg:w-[500px] animate-pulse-light" src="/images/logo.png" />
+            </div>
+          </div>
+        </section>
+
+        <section id="features" className="py-12 md:py-20">
+            <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4"><span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 bg-clip-text text-transparent">Ignite Your Trading</span></h2>
+                <p className="text-lg text-phoenix-text-secondary max-w-3xl mx-auto">PhoenixSwap combines the power of Solana with cutting-edge DeFi features to deliver an unmatched trading experience.</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{features.map(feature => <FeatureCard key={feature.title} {...feature} />)}</div>
+        </section>
+        
+        <section id="how-it-works" className="py-12 md:py-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4"><span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 bg-clip-text text-transparent">How PhoenixSwap Works</span></h2>
+            <p className="text-lg text-phoenix-text-secondary max-w-2xl mx-auto">Simple, secure, and efficient trading in just a few steps.</p>
+          </div>
+          <div className="relative">
+            <div className="hidden md:block absolute top-8 left-0 w-full h-px bg-phoenix-border" style={{ zIndex: 0 }}>
+              <div className="absolute top-1/2 left-1/3 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-phoenix-accent"></div>
+              <div className="absolute top-1/2 left-2/3 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-phoenix-accent"></div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 md:gap-10 justify-items-center items-start">
+              <HowItWorksStep stepNumber="1" title="Connect Your Wallet" description="Link your Solana-compatible wallet to PhoenixSwap with just a few clicks." />
+              <HowItWorksStep stepNumber="2" title="Select Tokens to Swap" description="Choose from hundreds of tokens available on the Solana network." />
+              <HowItWorksStep stepNumber="3" title="Review & Confirm" description="Check the transaction details, confirm, and watch your trade execute instantly." />
+            </div>
+          </div>
+        </section>
+        
+        <section className="py-12 md:py-20">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600"></div>
+            <div className="relative p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">Ready to Rise with PhoenixSwap?</h2>
+                <p className="text-black/80 text-lg max-w-[600px]">Join thousands of traders who have already discovered the power of decentralized trading on Solana.</p>
+              </div>
+              <div className="flex-shrink-0 mt-4 md:mt-0">
+                <Link to="/swap" className="inline-flex items-center justify-center rounded-md bg-black px-6 py-3 text-base font-semibold text-white hover:bg-gray-800 transition">
+                  Launch App <ArrowRightIcon className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+    </div>
+  );
+};
+
+export default HomePage;
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\HomePage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\LaunchpadDetailPage.tsx
+   Rozmiar: 6065 bajtów
+
+
+
+import React, { useState } from 'react';
+import { useWallet } from '@solana/wallet-adapter-react';
+import { usePresaleStore } from '../stores/usePresaleStore';
+import { usePresaleActions } from '../hooks/usePresale';
+import Countdown from '../components/Countdown';
+import MyMultiButton from '../components/MyMultiButton';
+import { FireIcon, CheckCircleIcon, ClockIcon } from '@heroicons/react/24/outline';
+import * as web3 from '@solana/web3.js';
+
+const LaunchpadDetailPage: React.FC = () => {
+  const { connected } = useWallet();
+  const { saleData, userPurchaseRecord, isLoading } = usePresaleStore();
+  const { purchaseTokens, claimTokens, isAdmin, initializeSale, withdrawSol } = usePresaleActions();
+  const [purchaseAmount, setPurchaseAmount] = useState('');
+
+  const now = Date.now() / 1000;
+  const isSaleActive = saleData && now > saleData.startTime.toNumber() && now < saleData.endTime.toNumber();
+  const isSaleUpcoming = saleData && now < saleData.startTime.toNumber();
+  const isSaleEnded = saleData && now > saleData.endTime.toNumber();
+  const raisedPercentage = saleData ? (saleData.totalRaised.toNumber() / saleData.hardCapLamports.toNumber()) * 100 : 0;
+  
+  const handlePurchase = () => {
+    const amount = parseFloat(purchaseAmount);
+    if (!isNaN(amount) && amount > 0) {
+      purchaseTokens(amount);
+    }
+  };
+
+  if (isLoading) {
+    return (
+      <div className="w-full max-w-lg mx-auto bg-phoenix-container-bg p-8 rounded-2xl shadow-2xl border border-phoenix-border animate-pulse">
+        <div className="h-8 bg-phoenix-border rounded w-3/4 mx-auto mb-4"></div>
+        <div className="h-4 bg-phoenix-border rounded w-1/2 mx-auto mb-8"></div>
+        <div className="h-6 bg-phoenix-border rounded w-full mb-2"></div>
+        <div className="h-4 bg-phoenix-border rounded w-full"></div>
+      </div>
+    );
+  }
+
+  if (!saleData && isAdmin) {
+    return (
+      <div className="w-full max-w-lg mx-auto bg-phoenix-container-bg p-8 rounded-2xl shadow-2xl border border-phoenix-border text-center">
+        <h2 className="text-2xl font-bold mb-4">Admin Panel</h2>
+        <p className="mb-6 text-phoenix-text-secondary">No active presale found. As the admin, you can initialize one.</p>
+        <button onClick={initializeSale} className="btn-primary-phoenix">Initialize Presale</button>
+      </div>
+    )
+  }
+
+  if (!saleData) {
+     return <div className="text-center p-8 bg-phoenix-container-bg rounded-lg border border-phoenix-border max-w-lg mx-auto">
+        <h2 className="text-2xl font-bold text-red-500">Presale Not Active</h2>
+        <p className="text-gray-400">Please check back later.</p>
+      </div>
+  }
+  
+  return (
+    <div className="w-full max-w-lg mx-auto bg-phoenix-container-bg p-6 sm:p-8 rounded-2xl shadow-2xl border border-phoenix-border space-y-6">
+      <div className="text-center">
+        <h1 className="text-3xl font-bold text-white">PHNX Token Presale</h1>
+        {isSaleActive && <div className="mt-2 inline-flex items-center gap-2 text-green-400"><FireIcon className="h-5 w-5"/>LIVE</div>}
+        {isSaleUpcoming && <div className="mt-2 inline-flex items-center gap-2 text-blue-400"><ClockIcon className="h-5 w-5"/>UPCOMING</div>}
+        {isSaleEnded && <div className="mt-2 inline-flex items-center gap-2 text-gray-400"><CheckCircleIcon className="h-5 w-5"/>ENDED</div>}
+      </div>
+
+      <div>
+        <div className="flex justify-between text-sm mb-1 text-gray-300">
+           <span>Progress</span>
+           <span className="font-bold text-phoenix-text-primary">{(saleData.totalRaised.toNumber() / web3.LAMPORTS_PER_SOL).toFixed(2)} / {(saleData.hardCapLamports.toNumber() / web3.LAMPORTS_PER_SOL).toFixed(0)} SOL</span>
+        </div>
+        <div className="w-full bg-phoenix-bg rounded-full h-4 border border-phoenix-border overflow-hidden">
+          <div className="bg-gradient-to-r from-yellow-500 to-orange-500 h-full rounded-full transition-all duration-500" style={{ width: `${raisedPercentage}%` }}></div>
+        </div>
+      </div>
+
+      <div className="text-center">
+        {isSaleActive && <Countdown endTime={saleData.endTime.toNumber()} />}
+        {isSaleUpcoming && <Countdown endTime={saleData.startTime.toNumber()} prefix="Starts In:"/>}
+      </div>
+
+      {connected ? (
+        <div className="space-y-4">
+          {isSaleActive && (
+             <div>
+                <input type="number" value={purchaseAmount} onChange={(e) => setPurchaseAmount(e.target.value)} placeholder="Enter SOL amount" className="w-full p-3 bg-phoenix-bg border border-phoenix-border rounded-lg text-white outline-none focus:border-orange-500"/>
+                 <button onClick={handlePurchase} className="w-full mt-3 btn-primary-phoenix" disabled={!purchaseAmount || parseFloat(purchaseAmount) <= 0}>Buy PHNX</button>
+            </div>
+          )}
+          {userPurchaseRecord && (
+            <div className="bg-phoenix-bg p-4 rounded-lg border border-phoenix-border">
+              <h3 className="font-semibold text-white mb-2">Your Contribution</h3>
+              <p className="text-sm text-gray-300">SOL Contributed: {(userPurchaseRecord.amountSpent.toNumber() / web3.LAMPORTS_PER_SOL).toFixed(4)}</p>
+              <p className="text-sm text-gray-300">Claimed: {userPurchaseRecord.claimed ? <span className="text-green-400">Yes</span> : 'No'}</p>
+            </div>
+          )}
+          {isSaleEnded && userPurchaseRecord && !userPurchaseRecord.claimed && (
+            <button onClick={claimTokens} className="btn-primary-phoenix bg-green-500 hover:bg-green-600">Claim Your PHNX</button>
+          )}
+          {isAdmin && isSaleEnded && (
+             <button onClick={withdrawSol} className="w-full mt-4 btn-secondary-phoenix">Admin: Withdraw SOL</button>
+          )}
+        </div>
+      ) : (
+         <div className="text-center py-4">
+            <p className="mb-4 text-gray-400">Connect your wallet to participate.</p>
+            <MyMultiButton className="!w-full !h-12 !text-base" />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default LaunchpadDetailPage;
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\LaunchpadDetailPage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\LaunchpadPage.tsx
+   Rozmiar: 6199 bajtów
+
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FireIcon, CheckCircleIcon, ClockIcon } from '@heroicons/react/24/outline';
+
+interface LaunchpadProject {
+  id: string;
+  name: string;
+  tokenSymbol: string;
+  logoUrl: string;
+  descriptionShort: string;
+  status: 'active' | 'upcoming' | 'completed';
+  targetAmount?: number;
+  targetAmountCurrency?: string;
+  raisedAmount?: number;
+  pricePerToken?: string;
+  slug: string;
+}
+
+const ProjectCard: React.FC<{ project: LaunchpadProject }> = ({ project }) => {
+  const progress = project.targetAmount && project.raisedAmount ?
+    (project.raisedAmount / project.targetAmount) * 100 : 0;
+
+  const getStatusBadge = () => {
+    switch (project.status) {
+      case 'active':
+        return <span className="absolute top-3 right-3 text-xs bg-green-500/20 text-green-400 px-2 py-0.5 rounded-full">Live</span>;
+      case 'upcoming':
+        return <span className="absolute top-3 right-3 text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full">Upcoming</span>;
+      case 'completed':
+        return <span className="absolute top-3 right-3 text-xs bg-gray-500/20 text-gray-400 px-2 py-0.5 rounded-full">Ended</span>;
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <Link to={`/launchpad/${project.slug}`} className="block bg-phoenix-bg p-5 rounded-lg shadow-lg border border-phoenix-border hover:border-phoenix-accent transition-all duration-300 transform hover:-translate-y-1 relative">
+      {getStatusBadge()}
+      <div className="flex items-center mb-4">
+        <img src={project.logoUrl} alt={project.name} className="w-12 h-12 rounded-full object-cover" />
+        <div className="ml-4">
+          <h3 className="text-lg font-bold text-phoenix-text-primary">{project.name}</h3>
+          <p className="text-sm text-phoenix-accent font-semibold">${project.tokenSymbol}</p>
+        </div>
+      </div>
+      <p className="text-sm text-phoenix-text-secondary mb-4 h-10 line-clamp-2">{project.descriptionShort}</p>
+      
+      {project.status === 'active' && (
+        <div>
+          <div className="flex justify-between text-xs text-phoenix-text-secondary mb-1">
+            <span>Progress</span>
+            <span>{progress.toFixed(2)}%</span>
+          </div>
+          <div className="w-full bg-phoenix-container-bg rounded-full h-2.5">
+            <div className="bg-phoenix-accent h-2.5 rounded-full" style={{ width: `${progress}%` }}></div>
+          </div>
+          <div className="flex justify-between text-xs text-phoenix-text-secondary mt-1">
+            <span>{project.raisedAmount?.toLocaleString()} {project.targetAmountCurrency}</span>
+            <span>{project.targetAmount?.toLocaleString()} {project.targetAmountCurrency}</span>
+          </div>
+        </div>
+      )}
+
+      {project.status !== 'active' && project.pricePerToken && (
+         <div className="text-sm text-phoenix-text-secondary">
+            Price: <span className="font-semibold text-phoenix-text-primary">{project.pricePerToken}</span>
+        </div>
+      )}
+    </Link>
+  );
+};
+
+const PROJECTS_DATA: LaunchpadProject[] = [
+  { id: 'phnx-presale', name: 'Phoenix Token', tokenSymbol: 'PHNX', logoUrl: '/images/logo.png', descriptionShort: 'Revolutionizing DeFi on Solana with innovative trading solutions and a community-driven ecosystem.', status: 'active', targetAmount: 5000, targetAmountCurrency: 'SOL', raisedAmount: 750, pricePerToken: '1 PHNX = 0.005 SOL', slug: 'phnx_initial_sale' },
+];
+
+const LaunchpadPage: React.FC = () => {
+    const activeProjects = PROJECTS_DATA.filter(p => p.status === 'active');
+    const upcomingProjects = PROJECTS_DATA.filter(p => p.status === 'upcoming');
+    const completedProjects = PROJECTS_DATA.filter(p => p.status === 'completed');
+
+    return (
+        <div className="flex-1 w-full">
+            <div className="text-center mb-10 md:mb-12">
+                <h1 className="text-4xl md:text-5xl font-bold text-phoenix-text-primary mb-3">Phoenix Launchpad</h1>
+                <p className="text-lg text-phoenix-text-secondary max-w-2xl mx-auto">Your gateway to the most promising new projects on Solana.</p>
+            </div>
+            <div className="mb-12">
+                <h2 className="text-2xl md:text-3xl font-semibold text-phoenix-text-primary mb-6 flex items-center">
+                    <FireIcon className="h-7 w-7 text-red-500 mr-3" />Active Presales
+                </h2>
+                {activeProjects.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {activeProjects.map(project => ( <ProjectCard key={project.id} project={project} /> ))}
+                    </div>
+                ) : (
+                    <div className="text-center py-6 text-phoenix-text-secondary bg-phoenix-container-bg rounded-lg border border-phoenix-border"><p>No active presales at the moment.</p></div>
+                )}
+            </div>
+            {upcomingProjects.length > 0 && (
+                <div className="mb-12">
+                    <h2 className="text-2xl md:text-3xl font-semibold text-phoenix-text-primary mb-6 flex items-center">
+                        <ClockIcon className="h-7 w-7 text-blue-400 mr-3" />Upcoming Presales
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {upcomingProjects.map(project => ( <ProjectCard key={project.id} project={project} /> ))}
+                    </div>
+                </div>
+            )}
+            {completedProjects.length > 0 && (
+              <div className="mb-12">
+                  <h2 className="text-2xl md:text-3xl font-semibold text-phoenix-text-primary mb-6 flex items-center">
+                      <CheckCircleIcon className="h-7 w-7 text-gray-500 mr-3" />Completed Presales
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {completedProjects.map(project => ( <ProjectCard key={project.id} project={project} /> ))}
+                  </div>
+              </div>
+            )}
+        </div>
+    );
+};
+
+export default LaunchpadPage;
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\LaunchpadPage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\LiquidityPage.tsx
+   Rozmiar: 5577 bajtów
+
+
+
+import React, { useState, useEffect } from 'react';
+import { useWallet } from '@solana/wallet-adapter-react';
+import { TokenInfo } from '@solana/spl-token-registry'; 
+import TokenModal from '../components/TokenModal';
+import { PlusCircleIcon, ChevronDownIcon as ChevronDownMiniIcon } from '@heroicons/react/24/outline'; 
+import { toast } from 'sonner';
+
+const JUPITER_STRICT_TOKEN_LIST_URL = 'https://token.jup.ag/strict';
+
+const LiquidityPage: React.FC = () => {
+  const { connected } = useWallet();
+
+  const [tokens, setTokens] = useState<TokenInfo[]>([]);
+  const [tokenA, setTokenA] = useState<TokenInfo | undefined>();
+  const [tokenB, setTokenB] = useState<TokenInfo | undefined>();
+  const [amountA, setAmountA] = useState<string>('');
+  const [amountB, setAmountB] = useState<string>('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [tokenFieldToUpdate, setTokenFieldToUpdate] = useState<'A' | 'B' | null>(null);
+
+  useEffect(() => {
+    fetch(JUPITER_STRICT_TOKEN_LIST_URL)
+      .then(res => res.json())
+      .then((data: TokenInfo[]) => {
+        setTokens(data);
+        setTokenA(data.find(t => t.symbol === 'SOL'));
+        setTokenB(data.find(t => t.symbol === 'USDC'));
+      });
+  }, []);
+
+  const openModal = (field: 'A' | 'B') => {
+    setTokenFieldToUpdate(field);
+    setIsModalOpen(true);
+  };
+
+  const handleTokenSelect = (token: TokenInfo) => {
+    if (tokenFieldToUpdate === 'A') setTokenA(token);
+    else if (tokenFieldToUpdate === 'B') setTokenB(token);
+    setTokenFieldToUpdate(null);
+  };
+
+  const handleAddLiquidity = () => {
+    if (!connected) { toast.error("Please connect your wallet first."); return; }
+    if (!tokenA || !tokenB || !amountA || !amountB) { toast.error("Please select tokens and enter amounts."); return; }
+    toast.info(`Adding liquidity for ${amountA} ${tokenA.symbol} and ${amountB} ${tokenB.symbol} (simulation).`);
+  };
+
+  const TokenButton: React.FC<{ token: TokenInfo | undefined, onClick: () => void }> = ({ token, onClick }) => (
+     <button onClick={onClick} disabled={!connected} className="flex-shrink-0 flex items-center bg-phoenix-bg border border-phoenix-border hover:border-phoenix-accent text-phoenix-text-primary py-2.5 px-4 rounded-lg text-sm font-medium min-w-[150px] justify-between disabled:opacity-50 disabled:cursor-not-allowed">
+        {token ? (
+            <div className="flex items-center">
+                {token.logoURI && <img src={token.logoURI} alt={token.symbol} className="h-5 w-5 mr-2 rounded-full" />}
+                {token.symbol}
+            </div>
+        ) : 'Select'}
+        <ChevronDownMiniIcon className="h-5 w-5 ml-1 text-phoenix-text-secondary" />
+    </button>
+  );
+
+  return (
+    <div className="flex-1 w-full py-8 px-4">
+        <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-8 md:mb-10">
+                <h1 className="text-3xl md:text-4xl font-bold text-phoenix-text-primary mb-2">Liquidity</h1>
+                <p className="text-md text-phoenix-text-secondary max-w-lg mx-auto">Provide liquidity to earn trading fees. Select a pair to get started.</p>
+            </div>
+            <div className="bg-phoenix-container-bg p-6 rounded-xl shadow-xl border border-phoenix-border mb-10">
+                <h2 className="text-xl font-semibold text-phoenix-text-primary mb-6">Add Liquidity</h2>
+                <div className="mb-4">
+                    <label className="block text-sm font-medium text-phoenix-text-secondary mb-1">Token A</label>
+                    <div className="flex gap-2">
+                        <TokenButton token={tokenA} onClick={() => openModal('A')} />
+                        <input type="number" placeholder="0.0" value={amountA} onChange={(e) => setAmountA(e.target.value)} className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-2.5 text-phoenix-text-primary outline-none focus:border-phoenix-accent" />
+                    </div>
+                </div>
+                <div className="flex justify-center my-4"><PlusCircleIcon className="h-7 w-7 text-phoenix-text-secondary" /></div>
+                <div className="mb-6">
+                    <label className="block text-sm font-medium text-phoenix-text-secondary mb-1">Token B</label>
+                    <div className="flex gap-2">
+                         <TokenButton token={tokenB} onClick={() => openModal('B')} />
+                        <input type="number" placeholder="0.0" value={amountB} onChange={(e) => setAmountB(e.target.value)} className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-2.5 text-phoenix-text-primary outline-none focus:border-phoenix-accent" />
+                    </div>
+                </div>
+                {connected ? (
+                    <button onClick={handleAddLiquidity} className="w-full bg-phoenix-accent text-black font-bold py-3 text-base rounded-md" disabled={!tokenA || !tokenB || !amountA || (parseFloat(amountA) <=0) || !amountB || (parseFloat(amountB) <=0) }>
+                        Add Liquidity
+                    </button>
+                ) : (
+                    <button className="w-full bg-phoenix-border text-phoenix-text-secondary font-bold py-3 text-base rounded-md opacity-70 cursor-not-allowed" disabled>
+                        Connect Wallet to Add Liquidity
+                    </button>
+                )}
+            </div>
+        </div>
+        <TokenModal tokens={tokens} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onSelectToken={handleTokenSelect} />
+    </div>
+  );
+};
+
+export default LiquidityPage;
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\LiquidityPage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\QuestsPage.tsx
+   Rozmiar: 6114 bajtów
+
+
+
+import React, { useState } from 'react';
+import { useWallet } from '@solana/wallet-adapter-react';
+import { ArchiveBoxXMarkIcon } from '@heroicons/react/24/outline';
+
+interface Quest {
+  id: number;
+  title: string;
+  description: string;
+  rewardAmount: number;
+  rewardToken: 'PHNX';
+  imageUrl: string;
+  points: number;
+  slug: string;
+  status: 'active' | 'completed' | 'upcoming';
+}
+
+const QUESTS_DATA: Quest[] = [
+    { id: 0, title: 'Rise Together', description: 'Join The Phoenix World in its first year of launch!', points: 10, rewardAmount: 100, rewardToken: 'PHNX', imageUrl: '/images/quests/quest-0.webp', slug: 'rise-together', status: 'upcoming' },
+    { id: 1, title: 'Spread the Flame', description: 'Join a tribe to unite with the community.', points: 5, rewardAmount: 50, rewardToken: 'PHNX', imageUrl: '/images/quests/quest-1.webp', slug: 'spread-the-flame', status: 'upcoming' },
+    { id: 2, title: 'Ancient Archives', description: 'Read The Phoenix World storyline.', points: 5, rewardAmount: 50, rewardToken: 'PHNX', imageUrl: '/images/quests/quest-2.webp', slug: 'ancient-archives', status: 'upcoming' },
+];
+
+const QuestCard: React.FC<{ quest: Quest; connected: boolean }> = ({ quest, connected }) => {
+  const isButtonDisabled = !connected || quest.status !== 'active';
+  
+  return (
+    <div className="border border-phoenix-border bg-phoenix-container-bg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col group">
+      <div className="relative w-full h-64"> 
+        <img 
+            src={quest.imageUrl} 
+            alt={quest.title} 
+            className="transition-transform duration-300 group-hover:scale-105 object-cover w-full h-full"
+        />
+      </div>
+      <div className="p-5 flex flex-col flex-grow">
+        <h3 className="font-bold text-lg text-phoenix-text-primary mb-2">{quest.title}</h3>
+        <p className="text-sm text-phoenix-text-secondary mb-4 flex-grow h-10 line-clamp-2">{quest.description}</p>
+        <div className="flex justify-between items-center text-xs text-phoenix-text-secondary mb-5 pt-4 border-t border-phoenix-border">
+            <span className="font-semibold text-phoenix-highlight">Reward: {quest.rewardAmount} ${quest.rewardToken}</span>
+            <span className="font-semibold text-phoenix-text-primary">{quest.points} Points</span>
+        </div>
+        <button
+            disabled={isButtonDisabled}
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:pointer-events-none outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-phoenix-accent focus-visible:ring-offset-phoenix-bg h-9 px-4 shadow-sm disabled:opacity-70 disabled:cursor-not-allowed"
+            style={{ 
+                backgroundColor: quest.status === 'active' ? 'var(--phoenix-accent)' : '#27272A',
+                color: quest.status === 'active' ? 'black' : 'var(--phoenix-text-secondary)'
+            }}
+        >
+          {quest.status === 'completed' ? 'Completed' : quest.status === 'upcoming' ? 'Coming Soon' : 'Start Quest'}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const QuestsPage: React.FC = () => {
+    const { connected } = useWallet();
+    const [filter, setFilter] = useState<'active' | 'upcoming' | 'completed'>('upcoming');
+    const filteredQuests = QUESTS_DATA.filter(quest => quest.status === filter);
+    
+    return (
+        <div className="flex-1 w-full py-8 px-4">
+            <div className="max-w-7xl mx-auto">
+                <section className="text-center mb-10 md:mb-12">
+                    <h1 className="text-4xl md:text-5xl font-bold text-phoenix-text-primary mb-3">Quest Board</h1>
+                    <p className="text-lg text-phoenix-text-secondary max-w-2xl mx-auto">Engage with the Phoenix ecosystem, complete tasks, and earn exclusive rewards and points.</p>
+                </section>
+                <section className="mb-8">
+                    <div className="flex justify-center items-center bg-phoenix-container-bg p-1.5 rounded-lg max-w-xs mx-auto">
+                        <button onClick={() => setFilter('active')} className={`px-6 py-1.5 rounded-md text-sm font-medium transition-colors ${filter === 'active' ? 'bg-phoenix-accent text-black shadow-md' : 'text-phoenix-text-secondary hover:bg-phoenix-bg'}`}>
+                            Active
+                        </button>
+                        <button onClick={() => setFilter('upcoming')} className={`px-6 py-1.5 rounded-md text-sm font-medium transition-colors ${filter === 'upcoming' ? 'bg-phoenix-accent text-black shadow-md' : 'text-phoenix-text-secondary hover:bg-phoenix-bg'}`}>
+                            Upcoming
+                        </button>
+                        <button onClick={() => setFilter('completed')} className={`px-6 py-1.5 rounded-md text-sm font-medium transition-colors ${filter === 'completed' ? 'bg-phoenix-accent text-black shadow-md' : 'text-phoenix-text-secondary hover:bg-phoenix-bg'}`}>
+                            Completed
+                        </button>
+                    </div>
+                </section>
+                <section>
+                    {filteredQuests.length > 0 ? (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            {filteredQuests.map(quest => (
+                                <QuestCard key={quest.id} quest={quest} connected={connected} />
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-16 text-phoenix-text-secondary bg-phoenix-container-bg rounded-lg border border-phoenix-border">
+                            <ArchiveBoxXMarkIcon className="h-12 w-12 mx-auto mb-2 text-gray-500" />
+                            <p className="text-lg">No {filter} quests to display at this time.</p>
+                        </div>
+                    )}
+                </section>
+            </div>
+        </div>
+    );
+};
+
+export default QuestsPage;
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\QuestsPage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\SmartSwapPage.tsx
+   Rozmiar: 1113 bajtów
+
+
+
+import React from 'react';
+import { WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
+
+const SmartSwapPage: React.FC = () => {
+  return (
+    <div className="flex-1 w-full flex flex-col items-center justify-center text-center py-10 min-h-[calc(100vh-200px)]">
+        <div className="max-w-lg">
+            <WrenchScrewdriverIcon className="h-20 w-20 md:h-24 md:w-24 text-phoenix-accent mx-auto mb-6 opacity-70" />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-phoenix-text-primary mb-4">
+                Smart Swap
+            </h1>
+            <p className="text-3xl sm:text-4xl font-semibold text-phoenix-highlight mb-6 animate-pulse">
+                Coming Soon...
+            </p>
+            <p className="text-md md:text-lg text-phoenix-text-secondary mb-8">
+                We are crafting an intelligent new way to trade your favorite tokens with enhanced features and optimal routing. The Phoenix Smart Swap will bring you even better rates and a smoother experience. Stay tuned!
+            </p>
+        </div>
+    </div>
+  );
+};
+
+export default SmartSwapPage;
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\SmartSwapPage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\SwapPage.tsx
+   Rozmiar: 1589 bajtów
+
+
+
+import React, { useEffect } from 'react';
+import { useWallet, useConnection } from '@solana/wallet-adapter-react';
+
+declare global {
+    interface Window { 
+      Jupiter: any; 
+    }
+}
+
+const SwapPage: React.FC = () => {
+    const { publicKey } = useWallet();
+    const { connection } = useConnection();
+
+    useEffect(() => {
+        const initJupiter = () => {
+            if (window.Jupiter) {
+                window.Jupiter.init({
+                    endpoint: connection.rpcEndpoint,
+                    displayMode: "integrated",
+                    integratedTargetId: "integrated-terminal",
+                    userPublicKey: publicKey ? publicKey.toBase58() : undefined,
+                    theme: 'dark',
+                    strictTokenList: false,
+                    formProps: {
+                        initialOutputMint: "So11111111111111111111111111111111111111112",
+                    },
+                });
+            }
+        };
+
+        const intervalId = setInterval(() => {
+            if (window.Jupiter) {
+                initJupiter();
+                clearInterval(intervalId);
+            }
+        }, 250);
+
+        return () => clearInterval(intervalId);
+    }, [publicKey, connection.rpcEndpoint]);
+
+    return (
+        <div className="flex-1 w-full flex items-start justify-center py-8">
+            <div className="w-full max-w-md min-h-[600px] flex flex-col" key={publicKey?.toBase58() ?? 'disconnected'}>
+                <div id="integrated-terminal" className="flex-grow"></div>
+            </div>
+        </div>
+    );
+};
+
+export default SwapPage;
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\SwapPage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\TokenFactoryPage.tsx
+   Rozmiar: 13049 bajtów
+
+
+
+import React, { useState, useMemo, ChangeEvent, useCallback } from 'react';
+import { useWallet } from '@solana/wallet-adapter-react';
+import { useWalletModal } from '@solana/wallet-adapter-react-ui';
+import { PhotoIcon, TrashIcon, PlusIcon, LinkIcon } from '@heroicons/react/24/outline';
+import { toast } from 'sonner';
+
+interface SocialLink {
+  id: number;
+  url: string;
+}
+
+const TokenFactoryPage: React.FC = () => {
+  const { connected } = useWallet();
+  const { setVisible } = useWalletModal();
+  const [tokenName, setTokenName] = useState('');
+  const [tokenSymbol, setTokenSymbol] = useState('');
+  const [decimals, setDecimals] = useState<string>('9');
+  const [totalSupply, setTotalSupply] = useState('');
+  const [description, setDescription] = useState('');
+  const [iconPreview, setIconPreview] = useState<string | null>(null);
+  const [socialLinks, setSocialLinks] = useState<SocialLink[]>([{ id: 1, url: '' }]);
+  const [revokeFreeze, setRevokeFreeze] = useState(false);
+  const [revokeMint, setRevokeMint] = useState(false);
+  const [revokeUpdate, setRevokeUpdate] = useState(false);
+
+  const isFormValid = useMemo(() => {
+    return tokenName.trim() !== '' && 
+           tokenSymbol.trim() !== '' && 
+           decimals.trim() !== '' && parseInt(decimals) >= 0 && 
+           totalSupply.trim() !== '' && parseInt(totalSupply) > 0;
+  }, [tokenName, tokenSymbol, decimals, totalSupply]);
+
+  const totalCost = useMemo(() => {
+    let cost = 0.1; 
+    if (revokeFreeze) cost += 0.05;
+    if (revokeMint) cost += 0.05;
+    if (revokeUpdate) cost += 0.05;
+    return cost;
+  }, [revokeFreeze, revokeMint, revokeUpdate]);
+
+  const handleIconChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      setIconPreview(URL.createObjectURL(file));
+    }
+  };
+
+  const handleAddSocialLink = () => setSocialLinks([...socialLinks, { id: Date.now(), url: '' }]);
+  const handleRemoveSocialLink = (id: number) => setSocialLinks(socialLinks.filter(link => link.id !== id));
+  const handleSocialLinkChange = (id: number, value: string) => setSocialLinks(socialLinks.map(link => link.id === id ? { ...link, url: value } : link));
+
+  const handleCreateToken = useCallback(() => {
+    if (!connected) {
+      setVisible(true);
+      return;
+    }
+    if (!isFormValid) {
+      toast.error("Please fill in all required fields correctly.");
+      return;
+    }
+    
+    toast.success(`Token creation simulated!`, {
+      description: `Total cost: ${totalCost.toFixed(2)} SOL`,
+    });
+  }, [connected, isFormValid, totalCost, setVisible]);
+
+  return (
+    <div className="flex-1 w-full py-8 md:py-12 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+          <div className="lg:col-span-3 bg-phoenix-container-bg p-6 rounded-2xl shadow-2xl border border-phoenix-border">
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-phoenix-text-primary border-b border-phoenix-border pb-2">Basic Information</h3>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="tokenName" className="block text-sm font-medium text-phoenix-text-secondary mb-1">Name</label>
+                    <input type="text" id="tokenName" value={tokenName} onChange={(e) => setTokenName(e.target.value)} placeholder="Max 32 characters" maxLength={32} className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-3 text-phoenix-text-primary outline-none focus:border-phoenix-accent placeholder-phoenix-text-secondary/70"/>
+                  </div>
+                  <div>
+                    <label htmlFor="tokenSymbol" className="block text-sm font-medium text-phoenix-text-secondary mb-1">Symbol</label>
+                    <input type="text" id="tokenSymbol" value={tokenSymbol} onChange={(e) => setTokenSymbol(e.target.value.toUpperCase())} placeholder="Max 8 characters" maxLength={8} className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-3 text-phoenix-text-primary outline-none focus:border-phoenix-accent placeholder-phoenix-text-secondary/70"/>
+                  </div>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="decimals" className="block text-sm font-medium text-phoenix-text-secondary mb-1">Decimals</label>
+                    <input type="number" id="decimals" value={decimals} onChange={(e) => setDecimals(e.target.value)} placeholder="Most use 6 or 9" className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-3 text-phoenix-text-primary outline-none focus:border-phoenix-accent placeholder-phoenix-text-secondary/70"/>
+                  </div>
+                  <div>
+                    <label htmlFor="totalSupply" className="block text-sm font-medium text-phoenix-text-secondary mb-1">Supply</label>
+                    <input type="number" id="totalSupply" value={totalSupply} onChange={(e) => setTotalSupply(e.target.value)} placeholder="Most use 10B" className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-3 text-phoenix-text-primary outline-none focus:border-phoenix-accent placeholder-phoenix-text-secondary/70"/>
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="description" className="block text-sm font-medium text-phoenix-text-secondary mb-1">Description</label>
+                  <textarea id="description" value={description} onChange={(e) => setDescription(e.target.value)} rows={3} placeholder="Tell us about your token (max 500 characters)" maxLength={500} className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-3 text-phoenix-text-primary outline-none focus:border-phoenix-accent placeholder-phoenix-text-secondary/70"></textarea>
+                  <p className="text-right text-xs text-phoenix-text-secondary/80">{description.length}/500</p>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-phoenix-text-secondary mb-2">Image</label>
+                  <div className="mt-2 flex items-center gap-4">
+                    <span className="h-16 w-16 rounded-full bg-phoenix-bg overflow-hidden flex items-center justify-center border-2 border-dashed border-phoenix-border">
+                      {iconPreview ? <img src={iconPreview} alt="Icon preview" className="object-cover h-full w-full" /> : <PhotoIcon className="h-8 w-8 text-phoenix-text-secondary" />}
+                    </span>
+                    <label htmlFor="icon-upload" className="relative cursor-pointer rounded-md bg-phoenix-bg px-4 py-2 text-sm font-semibold text-phoenix-text-primary shadow-sm border border-phoenix-border hover:bg-phoenix-border/50">
+                      <span>Upload Image</span>
+                      <input id="icon-upload" type="file" className="sr-only" onChange={handleIconChange} accept=".png, .jpg, .jpeg"/>
+                    </label>
+                  </div>
+                  <p className="text-xs text-phoenix-text-secondary/80 mt-1">.png, .jpg, .jpeg.</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 pt-4 border-t border-phoenix-border">
+                <h3 className="text-lg font-semibold text-phoenix-text-primary">Add Social Links & Tags</h3>
+                {socialLinks.map((link) => (
+                    <div key={link.id} className="flex items-center gap-2">
+                        <LinkIcon className="h-5 w-5 text-phoenix-text-secondary flex-shrink-0" />
+                        <input type="url" value={link.url} onChange={(e) => handleSocialLinkChange(link.id, e.target.value)} placeholder="https://twitter.com/your_handle" className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-2 text-sm text-phoenix-text-primary outline-none focus:border-phoenix-accent placeholder-phoenix-text-secondary/70"/>
+                        {socialLinks.length > 1 && <button onClick={() => handleRemoveSocialLink(link.id)} className="p-2 text-red-500 hover:text-red-400 rounded-md hover:bg-red-500/10"><TrashIcon className="h-5 w-5"/></button>}
+                    </div>
+                ))}
+                <button onClick={handleAddSocialLink} className="flex items-center gap-2 text-sm text-phoenix-accent hover:text-phoenix-highlight">
+                    <PlusIcon className="h-4 w-4"/> Add another link
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-2 space-y-6">
+              <div className="bg-phoenix-container-bg p-6 rounded-2xl shadow-2xl border border-phoenix-border">
+                <h3 className="text-lg font-semibold text-phoenix-text-primary mb-4">Revoke Authorities</h3>
+                <p className="text-sm text-phoenix-text-secondary mb-4">Increase investor trust by revoking authorities.</p>
+                <div className="space-y-3">
+                    <label className="flex justify-between items-center cursor-pointer">
+                        <div><span className="font-medium text-phoenix-text-primary">Revoke Mint</span><p className="text-xs text-phoenix-text-secondary">No one can create more tokens.</p></div>
+                        <div className="flex items-center gap-2"><span className="text-xs font-mono text-phoenix-highlight">+0.05 SOL</span><input type="checkbox" checked={revokeMint} onChange={() => setRevokeMint(!revokeMint)} className="h-4 w-4 rounded bg-phoenix-bg border-phoenix-border text-phoenix-accent focus:ring-phoenix-accent"/></div>
+                    </label>
+                    <label className="flex justify-between items-center cursor-pointer">
+                        <div><span className="font-medium text-phoenix-text-primary">Revoke Freeze</span><p className="text-xs text-phoenix-text-secondary">No one can freeze token accounts.</p></div>
+                        <div className="flex items-center gap-2"><span className="text-xs font-mono text-phoenix-highlight">+0.05 SOL</span><input type="checkbox" checked={revokeFreeze} onChange={() => setRevokeFreeze(!revokeFreeze)} className="h-4 w-4 rounded bg-phoenix-bg border-phoenix-border text-phoenix-accent focus:ring-phoenix-accent"/></div>
+                    </label>
+                    <label className="flex justify-between items-center cursor-pointer">
+                        <div><span className="font-medium text-phoenix-text-primary">Revoke Update</span><p className="text-xs text-phoenix-text-secondary">Metadata becomes immutable.</p></div>
+                        <div className="flex items-center gap-2"><span className="text-xs font-mono text-phoenix-highlight">+0.05 SOL</span><input type="checkbox" checked={revokeUpdate} onChange={() => setRevokeUpdate(!revokeUpdate)} className="h-4 w-4 rounded bg-phoenix-bg border-phoenix-border text-phoenix-accent focus:ring-phoenix-accent"/></div>
+                    </label>
+                </div>
+              </div>
+
+              <div className="bg-phoenix-container-bg p-6 rounded-2xl shadow-2xl border border-phoenix-border">
+                <h3 className="text-lg font-semibold text-phoenix-text-primary mb-4">Summary</h3>
+                <div className="space-y-2 border-b border-phoenix-border pb-3 mb-3 text-sm">
+                    <div className="flex justify-between"><span className="text-phoenix-text-secondary">Base Fee:</span><span className="font-mono">0.1 SOL</span></div>
+                    {revokeMint && <div className="flex justify-between"><span className="text-phoenix-text-secondary">Revoke Mint:</span><span className="font-mono">+0.05 SOL</span></div>}
+                    {revokeFreeze && <div className="flex justify-between"><span className="text-phoenix-text-secondary">Revoke Freeze:</span><span className="font-mono">+0.05 SOL</span></div>}
+                    {revokeUpdate && <div className="flex justify-between"><span className="text-phoenix-text-secondary">Revoke Update:</span><span className="font-mono">+0.05 SOL</span></div>}
+                </div>
+                <div className="flex justify-between font-bold text-lg mb-4">
+                    <span className="text-phoenix-text-primary">Total Cost:</span>
+                    <span className="text-phoenix-highlight">{totalCost.toFixed(2)} SOL</span>
+                </div>
+                {connected ? (
+                    <button onClick={handleCreateToken} className="btn-primary-phoenix" disabled={!isFormValid}>
+                        Create Token
+                    </button>
+                ) : (
+                    <button onClick={() => setVisible(true)} className="btn-primary-phoenix">
+                        Connect Wallet to Create
+                    </button>
+                )}
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TokenFactoryPage;
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\pages\TokenFactoryPage.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\providers\AppProviders.tsx
+   Rozmiar: 1069 bajtów
+
+
+
+import { FC, ReactNode, useMemo } from 'react';
+import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
+import { clusterApiUrl } from '@solana/web3.js';
+import { Toaster } from 'sonner';
+import { PresaleProvider } from './PresaleProvider';
+import { PhantomWalletAdapter } from '@solana/wallet-adapter-wallets';
+
+export const AppProviders: FC<{ children: ReactNode }> = ({ children }) => {
+  const endpoint = useMemo(() => {
+    return import.meta.env.VITE_SOLANA_RPC_HOST || clusterApiUrl('devnet');
+  }, []);
+
+  const wallets = useMemo(() => [
+      new PhantomWalletAdapter(),
+  ], []);
+
+  return (
+    <ConnectionProvider endpoint={endpoint}>
+      <WalletProvider wallets={wallets} autoConnect>
+        <WalletModalProvider>
+          <PresaleProvider>
+            {children}
+            <Toaster richColors position="bottom-right" theme="dark" />
+          </PresaleProvider>
+        </WalletModalProvider>
+      </WalletProvider>
+    </ConnectionProvider>
+  );
+};
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\providers\AppProviders.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\providers\PresaleProvider.tsx
+   Rozmiar: 216 bajtów
+
+
+
+import { FC, ReactNode } from 'react';
+import { usePresale } from '../hooks/usePresale';
+
+export const PresaleProvider: FC<{ children: ReactNode }> = ({ children }) => {
+  usePresale();
+  return <>{children}</>;
+};
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\providers\PresaleProvider.tsx
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\stores\usePresaleStore.ts
+   Rozmiar: 687 bajtów
+
+
+
+import { create } from 'zustand';
+import { SaleData, PurchaseRecord } from '../types';
+
+interface PresaleState {
+  saleData: SaleData | null;
+  userPurchaseRecord: PurchaseRecord | null;
+  isLoading: boolean;
+  setSaleData: (data: SaleData | null) => void;
+  setUserPurchaseRecord: (record: PurchaseRecord | null) => void;
+  setIsLoading: (loading: boolean) => void;
+}
+
+export const usePresaleStore = create<PresaleState>((set) => ({
+  saleData: null,
+  userPurchaseRecord: null,
+  isLoading: true,
+  setSaleData: (data) => set({ saleData: data }),
+  setUserPurchaseRecord: (record) => set({ userPurchaseRecord: record }),
+  setIsLoading: (loading) => set({ isLoading: loading }),
+}));
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\stores\usePresaleStore.ts
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\stores\useUserSOLBalanceStore.ts
+   Rozmiar: 676 bajtów
+
+
+
+import { create } from 'zustand';
+import { Connection, PublicKey, LAMPORTS_PER_SOL } from '@solana/web3.js';
+
+interface UserSOLBalanceStore {
+  balance: number;
+  getUserSOLBalance: (publicKey: PublicKey, connection: Connection) => void;
+}
+
+const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set) => ({
+  balance: 0,
+  getUserSOLBalance: async (publicKey, connection) => {
+    let balance = 0;
+    try {
+      balance = await connection.getBalance(publicKey, 'confirmed');
+      balance = balance / LAMPORTS_PER_SOL;
+    } catch (e) {
+      console.log(`Error getting SOL balance: `, e);
+    }
+    set({ balance });
+  },
+}));
+
+export default useUserSOLBalanceStore;
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\stores\useUserSOLBalanceStore.ts
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+   POCZTEK PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\utils\explorer.ts
+   Rozmiar: 234 bajtów
+
+
+
+export function getExplorerUrl(
+  cluster: 'mainnet-beta' | 'devnet' | 'testnet',
+  item: string,
+  itemType: 'tx' | 'address' | 'block' = 'address'
+): string {
+  return `https://solscan.io/${itemType}/${item}?cluster=${cluster}`;
+}
+
+
+
+  KONIEC PLIKU: C:\Intel\gp\681809149812\phoenix-swap-v4\utils\explorer.ts
+
+

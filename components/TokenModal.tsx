@@ -1,0 +1,69 @@
+
+import React, { useState, useEffect } from 'react';
+import { TokenInfo } from '@solana/spl-token-registry';
+
+interface TokenModalProps {
+  tokens: TokenInfo[];
+  isOpen: boolean;
+  onClose: () => void;
+  onSelectToken: (token: TokenInfo) => void;
+}
+
+const TokenModal: React.FC<TokenModalProps> = ({ tokens, isOpen, onClose, onSelectToken }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredTokens, setFilteredTokens] = useState<TokenInfo[]>([]);
+
+  useEffect(() => {
+    setFilteredTokens(
+        searchTerm === ''
+            ? tokens
+            : tokens.filter(token =>
+                token.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                token.symbol.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+    );
+  }, [searchTerm, tokens]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center" onClick={onClose}>
+      <div className="bg-phoenix-container-bg border border-phoenix-border rounded-lg p-5 w-full max-w-md max-h-[80vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
+        <h3 className="text-xl font-semibold text-center mb-4">Select a Token</h3>
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search name or symbol"
+          className="w-full bg-phoenix-bg border border-phoenix-border rounded-lg p-3 mb-4 text-phoenix-text-primary outline-none focus:border-phoenix-accent"
+        />
+        <ul className="flex-grow overflow-y-auto space-y-2 pr-2">
+          {filteredTokens.map(token => (
+            <li key={token.address}>
+              <button
+                onClick={() => { onSelectToken(token); onClose(); }}
+                className="w-full flex items-center gap-3 p-2.5 rounded-md hover:bg-phoenix-border transition-colors"
+              >
+<<<<<<< HEAD
+                <img src={token.logoURI || '/images/tokens/placeholder.png'} alt={token.symbol} className="h-7 w-7 rounded-full" />
+=======
+                <img src={token.logoURI || 'https://picsum.photos/64/64'} alt={token.symbol} className="h-7 w-7 rounded-full" />
+>>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
+                <div>
+                  <p className="font-semibold text-left">{token.name}</p>
+                  <p className="text-xs text-phoenix-text-secondary text-left">{token.symbol}</p>
+                </div>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+<<<<<<< HEAD
+export default TokenModal;
+=======
+export default TokenModal;
+>>>>>>> 2159ef1c79b15ebe65f713f30fc425982661d7c2
